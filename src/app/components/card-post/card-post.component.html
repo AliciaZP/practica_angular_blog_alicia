@@ -8,8 +8,7 @@
     <p class="card-text">Categoria: {{post.categoria}}</p>
     <p class="card-text">Fecha del post: {{post.fecha | date:'dd/MM/yyyy'}}</p>
 
-    <button class="buttonDetail" *ngIf="botonActivo" [routerLink]="['/post', post.titulo]">Ver detalle </button>
+    <button class="buttonDetail" *ngIf="botonActivo" [routerLink]="['/posts', post.titulo]">Ver detalle </button>
     <button class="buttonDelete">Borrar post</button>
-    <button class="buttonEditar">Editar post
-        empleado</button>
+    <button class="buttonEditar">Editar post</button>
 </div>

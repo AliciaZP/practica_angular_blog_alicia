@@ -10,8 +10,8 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: 'home', component: HomeComponent },
   { path: 'posts', component: ListaPostsComponent },
-  { path: 'posts/edit/:POSTTITLE', component: EditPostComponent },
-  { path: 'posts/:POSTTITLE', component: DetallePostComponent },
+  { path: 'posts/edit/:postTITLE', component: EditPostComponent },
+  { path: 'posts/:postTITLE', component: DetallePostComponent },
   { path: 'post/new', component: FormularioComponent },
   { path: '**', redirectTo: '/home' }
 ];

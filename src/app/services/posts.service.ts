@@ -80,6 +80,14 @@ export class PostsService {
     return this.arrPosts.filter(post => post.autor === pAutor)
   }
 
+  getByTitulo(pTitulo: string): Post {
+    const postsEncontrados = this.arrPosts.filter(post => post.titulo === pTitulo);
+
+    // Devolver el primer post encontrado o un objeto Post vacío si no hay coincidencias
+    return postsEncontrados.length > 0 ? postsEncontrados[0] : { titulo: '', texto: '', autor: '', imagen: '', fecha: new Date(), categoria: '' };
+
+  }
+
   orderByTitulo(ascendente: boolean): Post[] {
     // Ordenar y devolver una nueva lista sin modificar la original
     return this.arrPosts.slice().sort((a, b) => {

@@ -1,1 +1,7 @@
-<p>detalle-post works!</p>
+<div class="detalle" *ngIf="postSeleccionado">
+    <card-post [post]="postSeleccionado" [botonActivo]="false"></card-post>
+</div>
+
+<div class="detalle" *ngIf="!postSeleccionado">
+    <p>La serie no existe</p>
+</div>
