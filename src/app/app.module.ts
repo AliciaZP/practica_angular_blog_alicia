@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { ListaPostsComponent } from './pages/lista-posts/lista-posts.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { CardPostComponent } from './components/card-post/card-post.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { CardPostComponent } from './components/card-post/card-post.component';
     AppComponent,
     ListaPostsComponent,
     FormularioComponent,
-    CardPostComponent
+    CardPostComponent,
+    NavBarComponent,
+    FooterComponent
   ],
   imports: [
     ReactiveFormsModule,
