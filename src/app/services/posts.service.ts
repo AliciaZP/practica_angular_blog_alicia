@@ -44,13 +44,9 @@ export class PostsService {
   }
 
 
-  //quiero que me devuelva un array con string
   getCategorias(): string[] {
-    // Obtener la lista de categorias sin duplicar
     const categoriasSinOrdenar = [...new Set(this.arrPosts.map(post => post.categoria))];
-    // Ordena las categorias alfabéticamente
     const categoriasOrdenadas = categoriasSinOrdenar.sort((a, b) => a.localeCompare(b));
-
     return categoriasOrdenadas;
   }
 
@@ -58,12 +54,17 @@ export class PostsService {
     return this.arrPosts.filter(post => post.categoria === pCat)
   }
 
+  getAutores(): string[] {
+    const autoresSinOrdenar = [...new Set(this.arrPosts.map(post => post.autor))];
+    const autoresOrdenados = autoresSinOrdenar.sort((a, b) => a.localeCompare(b));
+    return autoresOrdenados;
+  }
+
+  getByAutor(pAutor: string): Post[] {
+    return this.arrPosts.filter(post => post.autor === pAutor)
+  }
+
 
 }
 
 
-/* 
-- Dentro del servicio necesitamos definir un array como propiedad del mismo donde insertaremos los diferentes Post
-- Dicho servicio dispondrá de un método create(Post) que nos permitirá agregar los Post cuando lo indiquemos desde el formulario
-- Además incluiremos el método getAll para recuperar todos los Post de nuestro blog
-- Y por último definiremos el método getByCategoria(cat) para que nos devuelva los post de una categoría concreta */

@@ -3,12 +3,20 @@
 
 
     <div class="select">
-        <label class="form-label">Selecciona el canal</label>
-        <select class="form-select" (change)="onChange($event)">
+        <label class="form-label">Selecciona la categoría</label>
+        <select class="form-select" (change)="onChangeCategoria($event)">
+            <option value="">Todas las categorías</option>
             <option *ngFor="let categoria of arrCategorias" [value]="categoria">{{categoria}}</option>
         </select>
     </div>
 
+    <div class="select">
+        <label class="form-label">Selecciona el autor</label>
+        <select class="form-select" (change)="onChangeAutor($event)">
+            <option value="">Todos los autores</option>
+            <option *ngFor="let autor of arrAutores" [value]="autor">{{autor}}</option>
+        </select>
+    </div>
 
     <div class="flex">
         <card-post *ngFor="let post of arrPosts" [post]="post"></card-post>

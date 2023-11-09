@@ -13,16 +13,21 @@ export class ListaPostsComponent {
 
   arrPosts: Post[] = []
   arrCategorias: string[] = []
-
+  arrAutores: string[] = []
 
   ngOnInit() {
     this.arrPosts = this.postsServices.getAll();
     this.arrCategorias = this.postsServices.getCategorias();
+    this.arrAutores = this.postsServices.getAutores();
   }
 
-  onChange($event: any) {
-    this.arrPosts = this.postsServices.getByCategoria($event.target.value);
+  onChangeCategoria($event: any) {
+    this.arrPosts = $event.target.value === "" ? this.postsServices.getAll() : this.postsServices.getByCategoria($event.target.value);
   };
 
+
+  onChangeAutor($event: any) {
+    this.arrPosts = $event.target.value === "" ? this.postsServices.getAll() : this.postsServices.getByAutor($event.target.value);
+  }
 }
 
