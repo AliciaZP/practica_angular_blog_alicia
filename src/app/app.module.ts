@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaPostsComponent } from './pages/lista-posts/lista-posts.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
+import { CardPostComponent } from './components/card-post/card-post.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaPostsComponent,
-    FormularioComponent
+    FormularioComponent,
+    CardPostComponent
   ],
   imports: [
     ReactiveFormsModule,
