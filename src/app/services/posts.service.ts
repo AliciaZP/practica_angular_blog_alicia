@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../interfaces/post.interface';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -80,12 +81,11 @@ export class PostsService {
     return this.arrPosts.filter(post => post.autor === pAutor)
   }
 
+
   getByTitulo(pTitulo: string): Post {
     const postsEncontrados = this.arrPosts.filter(post => post.titulo === pTitulo);
-
     // Devolver el primer post encontrado o un objeto Post vacío si no hay coincidencias
     return postsEncontrados.length > 0 ? postsEncontrados[0] : { titulo: '', texto: '', autor: '', imagen: '', fecha: new Date(), categoria: '' };
-
   }
 
   orderByTitulo(ascendente: boolean): Post[] {
@@ -112,20 +112,11 @@ export class PostsService {
   }
 
 
-  updateByTitulo(postTITLE: string) { }
+  updateByTitulo(postTITLE: string, formularioEdit: Partial<Post>): void {
+    const postIndex = this.arrPosts.findIndex(post => post.titulo === postTITLE);
 
+    if (postIndex !== -1) {
+      this.arrPosts[postIndex] = { ...this.arrPosts[postIndex], ...formularioEdit };
+    }
+  }
 }
-/* 
-deleteById(EMPLEADOID: string): Promise<IEmpleado> {
-  return firstValueFrom(
-    this.httpClient.delete<IEmpleado>(`${this.baseURL}/${EMPLEADOID}`)
-    //lo de la barra es la concatenacion de ${this.baseURL} +'/'+ ${EMPLEADOID}
-  );
-}
-
-updateById(EMPLEADOID: string, body: IEmpleado) {
-  return firstValueFrom(
-    this.httpClient.put(`${this.baseURL}/${EMPLEADOID}`, body)
-  );
-}
- */
