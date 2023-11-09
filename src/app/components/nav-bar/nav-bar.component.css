@@ -9,8 +9,8 @@
 nav {
     color: white;
     background-color: teal;
+    height: 10vh;
 
-    padding: 20px;
 }
 
 li {
