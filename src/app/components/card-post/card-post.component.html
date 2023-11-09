@@ -3,10 +3,10 @@
         <img src="" alt="">
     </figure>
     <h3 class="card-title">{{post.titulo}}</h3>
-    <p class="card-text">{{post.texto}}Texto</p>
-    <p class="card-text">{{post.autor}}Autor</p>
-    <p class="card-text">{{post.categoria}}Categoria</p>
-    <p class="card-text">{{post.fecha | date:'dd/MM/yyyy'}}</p>
+    <p class="card-text">{{post.texto}}</p>
+    <p class="card-text">Autor: {{post.autor}}</p>
+    <p class="card-text">Categoria: {{post.categoria}}</p>
+    <p class="card-text">Fecha del post: {{post.fecha | date:'dd/MM/yyyy'}}</p>
 
     <button class="buttonDetail" *ngIf="botonActivo" [routerLink]="['/post', post.titulo]">Ver detalle </button>
     <button class="buttonDelete">Borrar post</button>

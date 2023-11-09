@@ -10,36 +10,44 @@ export class PostsService {
 
   constructor() {
     this.arrPosts = [{
-      titulo: 'El impacto psicológico del color en el diseño',
-      texto: 'Explora cómo los colores afectan nuestras emociones y percepciones en el diseño gráfico y visual.',
-      autor: 'ColorExpert123',
+      titulo: 'Los gatos y su comportamiento',
+      texto: 'Explora el fascinante mundo del comportamiento de los gatos y cómo se comunican con nosotros.',
+      autor: 'Alicia',
       imagen: 'url_de_la_imagen_1.jpg',
-      fecha: new Date(2023, 11, 9),
-      categoria: 'Diseño Gráfico'
+      fecha: new Date(2023, 1, 30),
+      categoria: 'Razas de Gatos'
     },
     {
-      titulo: 'Significados culturales de los colores alrededor del mundo',
-      texto: 'Descubre cómo diferentes culturas interpretan y asignan significados a los colores en sus tradiciones y simbolismos.',
-      autor: 'CulturalColors',
+      titulo: 'Razas de gatos populares',
+      texto: 'Descubre las características únicas de algunas de las razas de gatos más populares en todo el mundo.',
+      autor: 'Alicia',
       imagen: 'url_de_la_imagen_2.jpg',
-      fecha: new Date(2003, 8, 31),
-      categoria: 'Cultura y Arte'
+      fecha: new Date(2013, 1, 30),
+      categoria: 'Razas de Gatos'
     },
     {
-      titulo: 'Cómo elegir colores para transmitir emociones en marketing',
-      texto: 'Consejos prácticos para seleccionar colores efectivos que comuniquen la identidad de una marca y conecten con el público.',
-      autor: 'MarketingColors',
+      titulo: 'Consejos para cuidar a tu gato en casa',
+      texto: 'Aprende cómo proporcionar el mejor cuidado posible a tu gato dentro de tu hogar, desde la alimentación hasta el juego.',
+      autor: 'Paco',
       imagen: 'url_de_la_imagen_3.jpg',
-      fecha: new Date(2021, 3, 10),
-      categoria: 'Marketing y Branding'
+      fecha: new Date(2000, 1, 30),
+      categoria: 'Cuidado del Gato'
     },
     {
-      titulo: 'Cómo elegir colores para transmitir emociones en marketing',
-      texto: 'Consejos prácticos para seleccionar colores efectivos que comuniquen la identidad de una marca y conecten con el público.',
-      autor: 'MarketingColors',
-      imagen: 'url_de_la_imagen_3.jpg',
-      fecha: new Date(1990, 3, 10),
-      categoria: 'Marketing y Branding'
+      titulo: 'Curiosidades felinas',
+      texto: 'Explora curiosidades divertidas y sorprendentes sobre la vida de los gatos que quizás no conocías.',
+      autor: 'Paco',
+      imagen: 'url_de_la_imagen_4.jpg',
+      fecha: new Date(1990, 1, 30),
+      categoria: 'Curiosidades'
+    },
+    {
+      titulo: 'Gatos y su relación con los humanos',
+      texto: 'Analiza la conexión especial entre los gatos y los humanos a lo largo de la historia y en la actualidad.',
+      autor: 'Anónimo',
+      imagen: 'url_de_la_imagen_5.jpg',
+      fecha: new Date(2020, 1, 30),
+      categoria: 'Cuidado del Gato'
     }]
   }
 
@@ -72,17 +80,18 @@ export class PostsService {
     return this.arrPosts.filter(post => post.autor === pAutor)
   }
 
-  orderByTitulo(ascendente: boolean) {
-    this.arrPosts = this.arrPosts.sort((a, b) => {
+  orderByTitulo(ascendente: boolean): Post[] {
+    // Ordenar y devolver una nueva lista sin modificar la original
+    return this.arrPosts.slice().sort((a, b) => {
       const comparacion = a.titulo.localeCompare(b.titulo);
       return ascendente ? comparacion : -comparacion;
-    })
+    });
   }
 
 
   //el metodo local compare no funciona con el tipo date, asi que hay que usar esta funcion
   orderByDate(ascendente: boolean) {
-    this.arrPosts = this.arrPosts.sort((a, b) => {
+    return this.arrPosts.slice().sort((a, b) => {
       const fechaA = new Date(a.fecha).getTime();
       const fechaB = new Date(b.fecha).getTime();
 

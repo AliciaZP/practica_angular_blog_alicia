@@ -32,12 +32,12 @@ export class ListaPostsComponent {
 
   onChangeTitulo($event: any) {
     const ascendente = $event.target.value === "A-Z";
-    this.postsServices.orderByTitulo(ascendente);
+    this.arrPosts = this.postsServices.orderByTitulo(ascendente);
     //si el value no corresponde, la funcion ejectua en orden descendente
   }
 
   onChangeFecha($event: any) {
     const ascendente = $event.target.value === "reciente";
-    this.postsServices.orderByDate(ascendente);
+    this.arrPosts = this.postsServices.orderByDate(ascendente);
   } //si el value no corresponde, la funcion ejectua en orden descendente
 }
