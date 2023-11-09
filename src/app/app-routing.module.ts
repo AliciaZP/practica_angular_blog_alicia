@@ -1,7 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ListaPostsComponent } from './pages/lista-posts/lista-posts.component';
+import { FormularioComponent } from './pages/formulario/formulario.component';
+import { DetallePostComponent } from './pages/detalle-post/detalle-post.component';
+import { EditPostComponent } from './pages/edit-post/edit-post.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: '/blog' },
+  { path: 'blog', },
+  { path: 'posts', component: ListaPostsComponent },
+  { path: 'posts/edit/:POSTID', component: EditPostComponent },
+  { path: 'posts/:POSTID', component: DetallePostComponent },
+  { path: '/post/new', component: FormularioComponent },
+  { path: '**', redirectTo: '/blog' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
