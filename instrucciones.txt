@@ -57,11 +57,18 @@ Como se trata de un blog sería ideal que tuviera la estructura normal de este t
         - Crear la estructura del footer 
         - Realizar el routing en caso de ser necesario
 
+Los listados también tienen filtros para ordenadar la informacion:
+    - Crear filtro por categoria
+    - Crear filtro por autor
+    - Ordenar alfabeticamente
+    - Ordenar por fecha
+    
 Normalmente los blogs se ven listados de forma resumida y al clickar en ellos puedes acceder a otra página con el post completo. Para ello se necesita implementar lo siguiente:
     -Crear un nuevo componente en pages/DetallePost
     -Realizar los métodos, rutas e imports correspondientes
 
-Tambien existe la posibilidad de editar los post sin tener que borrarlos y crearlos de nuevo. Para ello se necesita implementar lo siguiente:
+
+Tambien existe la posibilidad de editar los post sin tener que borrarlos y crearlos de cero. Para ello se necesita implementar lo siguiente:
     - Crear un nuevo componente en pages/EditPost
      -Realizar los métodos, rutas e imports correspondientes
 
