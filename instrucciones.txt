@@ -30,8 +30,7 @@ El siguiente elemento a definir es el componente ListaPosts
 
 Por último, desarrollaremos el componente Formulario
     - Este componente representa un formulario con los diferentes campos del modelo Post.
-    - Cuando pulsemos el botón enviar, el formulario debe mandar al servicio la información del nuevo Post para que se almacene junto a los 
-    demás.
+    - Cuando pulsemos el botón enviar, el formulario debe mandar al servicio la información del nuevo Post para que se almacene junto a los demás.
 
 Para subir nota:
 - Podemos usar localStorage para guardar la información de os posts creados

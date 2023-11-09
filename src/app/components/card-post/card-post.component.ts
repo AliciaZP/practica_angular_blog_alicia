@@ -1,4 +1,4 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Post } from 'src/app/interfaces/post.interface';
 
 @Component({
