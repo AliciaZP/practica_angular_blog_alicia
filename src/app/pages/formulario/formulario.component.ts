@@ -36,7 +36,7 @@ export class FormularioComponent {
       confirmButtonText: "Aceptar",
     });
     this.router.navigate(['/post'])
-    console.log(this.router.navigate(['post']));
+    console.log(this.router.navigate(['posts']));
 
   }
 
