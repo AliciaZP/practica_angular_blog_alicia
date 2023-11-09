@@ -10,11 +10,5 @@
 
     <button *ngIf="botonActivo" [routerLink]="['/posts', post.titulo]">Ver detalle </button>
     <button [routerLink]="['/posts','edit', post.titulo]">Editar post</button>
-    <button>Borrar post</button>
-
+    <button (click)="onClickDelete()">Borrar post</button>
 </div>
-
-<!-- 
-<button *ngIf=" botonActivo" (click)="onClickDelete()">Borrar empleado</button>
-    <button *ngIf="botonActivo" [routerLink]="['/empleados','edit', empleado._id]">Editar
-        empleado</button> -->

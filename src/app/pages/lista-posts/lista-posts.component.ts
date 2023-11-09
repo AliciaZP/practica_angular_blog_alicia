@@ -40,4 +40,12 @@ export class ListaPostsComponent {
     const ascendente = $event.target.value === "reciente";
     this.arrPosts = this.postsServices.orderByDate(ascendente);
   } //si el value no corresponde, la funcion ejectua en orden descendente
+
+
+  onPostBorrado($event: string) {
+    const response = this.postsServices.deleteByTitulo($event)
+    this.arrPosts = this.postsServices.getAll();
+  }
+
+
 }

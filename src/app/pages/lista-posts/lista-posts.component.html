@@ -36,6 +36,6 @@
 
     </div>
     <div>
-        <card-post *ngFor="let post of arrPosts" [post]="post"></card-post>
+        <card-post (borrarPostOutput)="onPostBorrado($event)" *ngFor="let post of arrPosts" [post]="post"></card-post>
     </div>
 </section>

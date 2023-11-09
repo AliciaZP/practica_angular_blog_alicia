@@ -106,5 +106,26 @@ export class PostsService {
       return ascendente ? fechaB - fechaA : fechaA - fechaB;
     });
   }
+
+  deleteByTitulo(postTITLE: string) {
+    this.arrPosts = this.arrPosts.filter(post => post.titulo !== postTITLE);
+  }
+
+
+  updateByTitulo(postTITLE: string) { }
+
+}
+/* 
+deleteById(EMPLEADOID: string): Promise<IEmpleado> {
+  return firstValueFrom(
+    this.httpClient.delete<IEmpleado>(`${this.baseURL}/${EMPLEADOID}`)
+    //lo de la barra es la concatenacion de ${this.baseURL} +'/'+ ${EMPLEADOID}
+  );
 }
 
+updateById(EMPLEADOID: string, body: IEmpleado) {
+  return firstValueFrom(
+    this.httpClient.put(`${this.baseURL}/${EMPLEADOID}`, body)
+  );
+}
+ */
