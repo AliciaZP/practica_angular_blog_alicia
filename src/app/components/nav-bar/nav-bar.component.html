@@ -1,7 +1,8 @@
 <nav>
     <ul class="flex">
-        <li class="logo">LOGOTIPO</li>
-        <li>Lista de post</li>
-        <li>Formulario</li>
+        <li class="logo" [routerLink]="['home']">LOGOTIPO</li>
+        <li [routerLink]="['home']">Home</li>
+        <li [routerLink]="['posts']">Lista de post</li>
+        <li [routerLink]="['post/new']">Formulario</li>
     </ul>
 </nav>

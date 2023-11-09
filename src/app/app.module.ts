@@ -11,6 +11,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { EditPostComponent } from './pages/edit-post/edit-post.component';
 import { DetallePostComponent } from './pages/detalle-post/detalle-post.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { DetallePostComponent } from './pages/detalle-post/detalle-post.componen
     NavBarComponent,
     FooterComponent,
     EditPostComponent,
-    DetallePostComponent
+    DetallePostComponent,
+    HomeComponent
   ],
   imports: [
     ReactiveFormsModule,
