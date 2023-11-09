@@ -7,10 +7,12 @@ import { EditPostComponent } from './pages/edit-post/edit-post.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/blog' },
-  { path: 'blog', },
+  {
+    path: 'blog',
+  },
   { path: 'posts', component: ListaPostsComponent },
-  { path: 'posts/edit/:POSTID', component: EditPostComponent },
-  { path: 'posts/:POSTID', component: DetallePostComponent },
+  { path: 'posts/edit/:POSTTITLE', component: EditPostComponent },
+  { path: 'posts/:POSTTITLE', component: DetallePostComponent },
   { path: '/post/new', component: FormularioComponent },
   { path: '**', redirectTo: '/blog' }
 ];

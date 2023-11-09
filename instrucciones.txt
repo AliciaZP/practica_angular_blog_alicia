@@ -47,6 +47,9 @@ El elemento post se va a repetir muchas veces por lo tanto seria necesario añad
         - Incorporar dicho componente en la estrcutura html de ListaPosts
 
 Como se trata de un blog sería ideal que tuviera la estructura normal de este tipo de webs/apps. Voy a implementar diferentes componentes que son fijos en un blog:
+    - Crear un componente en pages/Home:
+        - Crear la estructura de la Home 
+        - Realizar el routing correspondiente
     - Crear un nuevo componente en components/NavBar
         - Crear la estructura de la nav-bar 
         - Realizar el routing correspondiente
