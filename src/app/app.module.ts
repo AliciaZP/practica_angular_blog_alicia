@@ -9,6 +9,8 @@ import { FormularioComponent } from './pages/formulario/formulario.component';
 import { CardPostComponent } from './components/card-post/card-post.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { EditPostComponent } from './pages/edit-post/edit-post.component';
+import { DetallePostComponent } from './pages/detalle-post/detalle-post.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { FooterComponent } from './components/footer/footer.component';
     FormularioComponent,
     CardPostComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    EditPostComponent,
+    DetallePostComponent
   ],
   imports: [
     ReactiveFormsModule,
