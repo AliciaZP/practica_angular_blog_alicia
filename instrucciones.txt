@@ -14,8 +14,6 @@ Formulario)
 
 
 
-
-
 ##PASOS A SEGUIR:
 Definir el modelo de datos de nuestra aplicación.
     - En este caso tendremos que definir el interfaz Post que cuenta con las siguientes propiedades:
@@ -38,3 +36,13 @@ Por último, desarrollaremos el componente Formulario
 
 Para subir nota:
 - Podemos usar localStorage para guardar la información de os posts creados
+
+
+
+
+##IMPLEMENTACIONES PROPIAS 
+El elemento post se va a repetir muchas veces por lo tanto seria necesario añadir un component tipo card que crease la estructura base de un post. De este modo cuando creemos más post todos tendrán la misma estructura
+    - Crear un nuevo componente en components/card-post
+    - Crear la estructura de la card
+    - Realizar los métodos, rutas e imports correspondientes
+    - Incorporar dicho componente en la estrcutura html de ListaPosts
