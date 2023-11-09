@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { Post } from 'src/app/interfaces/post.interface';
-import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'card-post',
@@ -9,12 +8,18 @@ import { PostsService } from 'src/app/services/posts.service';
 })
 export class CardPostComponent {
 
-  postsServices = inject(PostsService)
-  arrPosts: Post[] = [];
+  @Input() post: Post;
+  @Input() botonActivo: boolean = true;
 
-  ngOnInit() {
-    this.arrPosts = this.postsServices.getAll();
-    console.log(this.postsServices.getAll());
-
+  constructor() {
+    this.post = {
+      titulo: "",
+      texto: "",
+      autor: "",
+      imagen: "",
+      fecha: "",
+      categoria: "",
+    }
   }
+
 }

@@ -43,9 +43,21 @@ export class PostsService {
     return this.arrPosts
   }
 
+
+  //quiero que me devuelva un array con string
+  getCategorias(): string[] {
+    // Obtener la lista de categorias sin duplicar
+    const categoriasSinOrdenar = [...new Set(this.arrPosts.map(post => post.categoria))];
+    // Ordena las categorias alfabéticamente
+    const categoriasOrdenadas = categoriasSinOrdenar.sort((a, b) => a.localeCompare(b));
+
+    return categoriasOrdenadas;
+  }
+
   getByCategoria(pCat: string): Post[] {
     return this.arrPosts.filter(post => post.categoria === pCat)
   }
+
 
 }
 

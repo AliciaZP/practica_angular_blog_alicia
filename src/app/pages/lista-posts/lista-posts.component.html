@@ -1,7 +1,16 @@
 <section class="container">
     <h2>LISTA DE POST</h2>
-    <div class="flex">
-        <card-post></card-post>
+
+
+    <div class="select">
+        <label class="form-label">Selecciona el canal</label>
+        <select class="form-select" (change)="onChange($event)">
+            <option *ngFor="let categoria of arrCategorias" [value]="categoria">{{categoria}}</option>
+        </select>
     </div>
-    AQUI DEBAJO SALDRAN EL RESTO DE POSTS
+
+
+    <div class="flex">
+        <card-post *ngFor="let post of arrPosts" [post]="post"></card-post>
+    </div>
 </section>
