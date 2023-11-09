@@ -6,13 +6,15 @@ import { Post } from '../interfaces/post.interface';
 })
 export class PostsService {
 
-  arrPosts: Post[] = [
-    {
+  arrPosts: Post[];
+
+  constructor() {
+    this.arrPosts = [{
       titulo: 'El impacto psicológico del color en el diseño',
       texto: 'Explora cómo los colores afectan nuestras emociones y percepciones en el diseño gráfico y visual.',
       autor: 'ColorExpert123',
       imagen: 'url_de_la_imagen_1.jpg',
-      fecha: new Date('2023-11-09'),
+      fecha: '2023-11-09',
       categoria: 'Diseño Gráfico'
     },
     {
@@ -20,7 +22,7 @@ export class PostsService {
       texto: 'Descubre cómo diferentes culturas interpretan y asignan significados a los colores en sus tradiciones y simbolismos.',
       autor: 'CulturalColors',
       imagen: 'url_de_la_imagen_2.jpg',
-      fecha: new Date('2023-11-10'),
+      fecha: '2023-11-10',
       categoria: 'Cultura y Arte'
     },
     {
@@ -28,12 +30,10 @@ export class PostsService {
       texto: 'Consejos prácticos para seleccionar colores efectivos que comuniquen la identidad de una marca y conecten con el público.',
       autor: 'MarketingColors',
       imagen: 'url_de_la_imagen_3.jpg',
-      fecha: new Date('2023-11-11'),
+      fecha: '2023-11-11',
       categoria: 'Marketing y Branding'
-    }
-  ];
-
-  constructor() { this.arrPosts = [] }
+    }]
+  }
 
   create(pPost: Post) {
     this.arrPosts.push(pPost)

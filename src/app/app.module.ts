@@ -5,12 +5,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaPostsComponent } from './pages/lista-posts/lista-posts.component';
+import { FormularioComponent } from './pages/formulario/formulario.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaPostsComponent
+    ListaPostsComponent,
+    FormularioComponent
   ],
   imports: [
     ReactiveFormsModule,
