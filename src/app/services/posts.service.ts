@@ -22,7 +22,7 @@ export class PostsService {
       texto: 'Descubre cómo diferentes culturas interpretan y asignan significados a los colores en sus tradiciones y simbolismos.',
       autor: 'CulturalColors',
       imagen: 'url_de_la_imagen_2.jpg',
-      fecha: new Date(2020, 8, 31),
+      fecha: new Date(2003, 8, 31),
       categoria: 'Cultura y Arte'
     },
     {
@@ -31,6 +31,14 @@ export class PostsService {
       autor: 'MarketingColors',
       imagen: 'url_de_la_imagen_3.jpg',
       fecha: new Date(2021, 3, 10),
+      categoria: 'Marketing y Branding'
+    },
+    {
+      titulo: 'Cómo elegir colores para transmitir emociones en marketing',
+      texto: 'Consejos prácticos para seleccionar colores efectivos que comuniquen la identidad de una marca y conecten con el público.',
+      autor: 'MarketingColors',
+      imagen: 'url_de_la_imagen_3.jpg',
+      fecha: new Date(1990, 3, 10),
       categoria: 'Marketing y Branding'
     }]
   }
@@ -64,9 +72,13 @@ export class PostsService {
     return this.arrPosts.filter(post => post.autor === pAutor)
   }
 
-  ordenarPorTitulo() {
-    return this.arrPosts.slice().sort((a, b) => a.titulo.localeCompare(b.titulo));
+  orderByTitulo(ascendente: boolean) {
+    this.arrPosts = this.arrPosts.sort((a, b) => {
+      const comparacion = a.titulo.localeCompare(b.titulo);
+      return ascendente ? comparacion : -comparacion;
+    })
   }
+
 
   //el metodo local compare no funciona con el tipo date, asi que hay que usar esta funcion
   orderByDate(ascendente: boolean) {

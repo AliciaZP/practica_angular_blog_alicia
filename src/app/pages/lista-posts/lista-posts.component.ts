@@ -30,13 +30,14 @@ export class ListaPostsComponent {
     this.arrPosts = $event.target.value === "" ? this.postsServices.getAll() : this.postsServices.getByAutor($event.target.value);
   }
 
-  onChangeFecha($event: any) {
-    if ($event.target.value === "reciente") {
-      // Más reciente a más antiguo
-      this.postsServices.orderByDate(true);
-    } else if ($event.target.value === "antiguo") {
-      // Más antiguo a más reciente
-      this.postsServices.orderByDate(false);
-    }
+  onChangeTitulo($event: any) {
+    const ascendente = $event.target.value === "A-Z";
+    this.postsServices.orderByTitulo(ascendente);
+    //si el value no corresponde, la funcion ejectua en orden descendente
   }
+
+  onChangeFecha($event: any) {
+    const ascendente = $event.target.value === "reciente";
+    this.postsServices.orderByDate(ascendente);
+  } //si el value no corresponde, la funcion ejectua en orden descendente
 }

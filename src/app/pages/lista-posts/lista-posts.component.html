@@ -19,6 +19,14 @@
     </div>
 
     <div class="select">
+        <label class="form-label">Ordenar por título</label>
+        <select class="form-select" (change)="onChangeTitulo($event)">
+            <option value="A-Z">De la A a la Z</option>
+            <option value="Z-A">De la Z a la A</option>
+        </select>
+    </div>
+
+    <div class="select">
         <label class="form-label">Ordenar por fecha</label>
         <select class="form-select" (change)="onChangeFecha($event)">
             <option value="reciente">Más reciente a más antiguo</option>
