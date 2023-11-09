@@ -6,7 +6,8 @@
 El objetivo de este ejercicio es desarrollar un sistema sencillo de blogging
 
 - La aplicación que desarrollemos dispondrá de dos rutas:
-/posts. Se trata de la ruta que da acceso a los diferentes Post que tengamos en el blog/new. Dentro de esta ruta encontramos el formulario que nos permitirá agregar nuevos Post dentro de nuestro sistema
+/posts. Se trata de la ruta que da acceso a los diferentes Post que tengamos en el blog
+/new. Dentro de esta ruta encontramos el formulario que nos permitirá agregar nuevos Post dentro de nuestro sistema
 
 - Cada una de estas rutas está representada por un componente (ListaPosts y
 Formulario)
