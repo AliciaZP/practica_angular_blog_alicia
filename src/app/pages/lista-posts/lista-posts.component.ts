@@ -12,7 +12,3 @@ export class ListaPostsComponent {
 
 }
 
-
-/* El siguiente elemento a definir es el componente ListaPosts
-    - Se trata de un componente que, recibe del servicio todos los Post y los muestra de manera ordenada.
-    - (opcional) Disponer de una serie de botones que nos permitan filtrar por categoría. */

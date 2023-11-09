@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Post } from 'src/app/interfaces/post.interface';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'card-post',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class CardPostComponent {
 
+  postsServices = inject(PostsService)
+  arrPosts: Post[] = [];
+
+  ngOnInit() {
+    this.arrPosts = this.postsServices.getAll();
+    console.log(this.postsServices.getAll());
+
+  }
 }

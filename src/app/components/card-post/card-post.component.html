@@ -1,16 +1,15 @@
 <h2>DETALLE DEL POST</h2>
-<div class="card-body">
+<div class="card-body" *ngFor="let post of arrPosts">
     <figure>
         <img src="" alt="">
     </figure>
-    <h3 class="card-title">Titulo</h3>
-    <p class="card-text">Texto</p>
-    <p class="card-text">Autor</p>
-    <p class="card-text">Fecha</p>
-    <p class="card-text">Categoria</p>
-    <p class="card-text">Fecha <!-- {{post.fecha | date:'dd/MM/yyyy HH:mm:ss'}} --></p>
+    <h3 class="card-title">{{post.titulo}}</h3>
+    <p class="card-text">{{post.texto}}Texto</p>
+    <p class="card-text">{{post.autor}}Autor</p>
+    <p class="card-text">{{post.categoria}}Categoria</p>
+    <p class="card-text">{{post.fecha | date:'dd/MM/yyyy'}}</p>
 
-    <button class="buttonDetail">Ver detalle </button>
+    <button class="buttonDetail" [routerLink]="['/post', post.titulo]">Ver detalle </button>
     <button class="buttonDelete">Borrar post</button>
     <button class="buttonEditar">Editar post
         empleado</button>

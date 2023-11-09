@@ -6,7 +6,7 @@ import { Post } from '../interfaces/post.interface';
 })
 export class PostsService {
 
-  arrPosts: Post[];
+  private arrPosts: Post[];
 
   constructor() {
     this.arrPosts = [{
