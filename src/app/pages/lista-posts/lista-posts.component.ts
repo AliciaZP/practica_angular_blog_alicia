@@ -29,5 +29,14 @@ export class ListaPostsComponent {
   onChangeAutor($event: any) {
     this.arrPosts = $event.target.value === "" ? this.postsServices.getAll() : this.postsServices.getByAutor($event.target.value);
   }
-}
 
+  onChangeFecha($event: any) {
+    if ($event.target.value === "reciente") {
+      // Más reciente a más antiguo
+      this.postsServices.orderByDate(true);
+    } else if ($event.target.value === "antiguo") {
+      // Más antiguo a más reciente
+      this.postsServices.orderByDate(false);
+    }
+  }
+}

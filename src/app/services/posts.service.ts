@@ -14,7 +14,7 @@ export class PostsService {
       texto: 'Explora cómo los colores afectan nuestras emociones y percepciones en el diseño gráfico y visual.',
       autor: 'ColorExpert123',
       imagen: 'url_de_la_imagen_1.jpg',
-      fecha: '2023-11-09',
+      fecha: new Date(2023, 11, 9),
       categoria: 'Diseño Gráfico'
     },
     {
@@ -22,7 +22,7 @@ export class PostsService {
       texto: 'Descubre cómo diferentes culturas interpretan y asignan significados a los colores en sus tradiciones y simbolismos.',
       autor: 'CulturalColors',
       imagen: 'url_de_la_imagen_2.jpg',
-      fecha: '2023-11-10',
+      fecha: new Date(2020, 8, 31),
       categoria: 'Cultura y Arte'
     },
     {
@@ -30,7 +30,7 @@ export class PostsService {
       texto: 'Consejos prácticos para seleccionar colores efectivos que comuniquen la identidad de una marca y conecten con el público.',
       autor: 'MarketingColors',
       imagen: 'url_de_la_imagen_3.jpg',
-      fecha: '2023-11-11',
+      fecha: new Date(2021, 3, 10),
       categoria: 'Marketing y Branding'
     }]
   }
@@ -64,7 +64,18 @@ export class PostsService {
     return this.arrPosts.filter(post => post.autor === pAutor)
   }
 
+  ordenarPorTitulo() {
+    return this.arrPosts.slice().sort((a, b) => a.titulo.localeCompare(b.titulo));
+  }
 
+  //el metodo local compare no funciona con el tipo date, asi que hay que usar esta funcion
+  orderByDate(ascendente: boolean) {
+    this.arrPosts = this.arrPosts.sort((a, b) => {
+      const fechaA = new Date(a.fecha).getTime();
+      const fechaB = new Date(b.fecha).getTime();
+
+      return ascendente ? fechaB - fechaA : fechaA - fechaB;
+    });
+  }
 }
-
 

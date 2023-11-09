@@ -18,6 +18,15 @@
         </select>
     </div>
 
+    <div class="select">
+        <label class="form-label">Ordenar por fecha</label>
+        <select class="form-select" (change)="onChangeFecha($event)">
+            <option value="reciente">Más reciente a más antiguo</option>
+            <option value="antiguo">Más antiguo a más reciente</option>
+        </select>
+    </div>
+
+
     <div class="flex">
         <card-post *ngFor="let post of arrPosts" [post]="post"></card-post>
     </div>
