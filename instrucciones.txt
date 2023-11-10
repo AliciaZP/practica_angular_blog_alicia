@@ -78,3 +78,12 @@ Tambien existe la posibilidad de editar los post sin tener que borrarlos y crear
 
 Ponerle estilo a toda la app (FALTAAA)
 
+----------------------------------------------------------------------------------------
+COSAS QUE REVISAR:
+- Por que el filtro de categoria y autores no funcionan a la vez
+- Por que el routing del formulario no puede ser posts/new
+- Falta hacer el localStorage
+- Falta hacer todo el CSS
+
+----------------------------------------------------------------------------------------
+PARA CERRAR REFACTORIZACION
