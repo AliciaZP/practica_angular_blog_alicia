@@ -1,8 +1,27 @@
-<nav>
-    <ul class="flex">
-        <li class="logo" [routerLink]="['home']">LOGOTIPO</li>
-        <li [routerLink]="['home']">Home</li>
-        <li [routerLink]="['posts']">Lista de post</li>
-        <li [routerLink]="['new']">Formulario</li>
-    </ul>
-</nav>
+<div class="color-bar"></div>
+<div class="nav-position">
+    <nav class="px-5 py-4 text-black">
+        <ul class="d-flex justify-content-between align-items-center">
+            <li><i class="fa-solid fa-palette fs-1 text" style="color: #000000;"></i> </li>
+            <li class="fs-1 text" [routerLink]="['home']">
+                <h1 class="fw-bold">TEORIA DEL COLOR</h1>
+            </li>
+            <li>Modo noche <i class="fa-solid fa-circle-half-stroke" style="color: #000000;"></i></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="nav-position ">
+    <nav class="px-5 py-4 bg-black text-white ">
+        <ul class="d-flex justify-content-start align-items-center gap-5 ">
+            <li [routerLink]="['home']"><i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                Home</li>
+            <li [routerLink]="['posts']"><i class="fa-solid fa-list-ul" style="color: #ffffff;"></i> Lista de post</li>
+            <li class="flex-grow-1" [routerLink]="['new']"><i class="fa-regular fa-square-plus"
+                    style="color: #ffffff;"></i>
+                Nuevo post</li>
+            <li [routerLink]="['home']"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Registrarse</li>
+            <li [routerLink]="['home']"><i class="fa-solid fa-user-lock" style="color: #ffffff;"></i> Loggin</li>
+        </ul>
+    </nav>
+</div>

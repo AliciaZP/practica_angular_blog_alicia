@@ -5,3 +5,7 @@
     flex-wrap: wrap;
     gap: 30px;
 }
+
+#hero {
+    background-color: lightblue;
+}
