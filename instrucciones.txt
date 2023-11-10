@@ -5,69 +5,76 @@
 El objetivo de este ejercicio es desarrollar un sistema sencillo de blogging
 
 - La aplicación que desarrollemos dispondrá de dos rutas:
-/posts. Se trata de la ruta que da acceso a los diferentes Post que tengamos en el blog
-/new. Dentro de esta ruta encontramos el formulario que nos permitirá agregar nuevos Post dentro de nuestro sistema
+/posts. Se trata de la ruta que da acceso a los diferentes Post que tengamos en el blog (OK)
+/new. Dentro de esta ruta encontramos el formulario que nos permitirá agregar nuevos Post dentro de nuestro sistema (OK)
 
 - Cada una de estas rutas está representada por un componente (ListaPosts y
-Formulario)
+Formulario) (OK)
 
 ----------------------------------------------------------------------------------------
 ##PASOS A SEGUIR:
 
 Definir el modelo de datos de nuestra aplicación.
     - En este caso tendremos que definir el interfaz Post que cuenta con las siguientes propiedades:
-        titulo, texto, autor, imagen (puede ser una url), fecha, categoria
+        titulo, texto, autor, imagen (puede ser una url), fecha, categoria (OK)
 
 El siguiente paso es la creación del Servicio que se encargará de manejar la información de nuestra aplicación.
-    - Dentro del servicio necesitamos definir un array como propiedad del mismo donde insertaremos los diferentes Post
-    - Dicho servicio dispondrá de un método create(Post) que nos permitirá agregar los Post cuando lo indiquemos desde el formulario
-    - Además incluiremos el método getAll para recuperar todos los Post de nuestro blog
-    - Y por último definiremos el método getByCategoria(cat) para que nos devuelva los post de una categoría concreta
+    - Dentro del servicio necesitamos definir un array como propiedad del mismo donde insertaremos los diferentes Post (OK)
+    - Dicho servicio dispondrá de un método create(Post) que nos permitirá agregar los Post cuando lo indiquemos desde el formulario (OK)
+    - Además incluiremos el método getAll para recuperar todos los Post de nuestro blog (OK)
+    - Y por último definiremos el método getByCategoria(cat) para que nos devuelva los post de una categoría concreta (OK)
 
-El siguiente elemento a definir es el componente ListaPosts
-    - Se trata de un componente que, recibe del servicio todos los Post y los muestra de manera ordenada.
-    - (opcional) Disponer de una serie de botones que nos permitan filtrar por categoría.
+El siguiente elemento a definir es el componente ListaPosts 
+    - Se trata de un componente que, recibe del servicio todos los Post y los muestra de manera ordenada.(OK)
+    - (opcional) Disponer de una serie de botones que nos permitan filtrar por categoría. (OK)
 
 Por último, desarrollaremos el componente Formulario
-    - Este componente representa un formulario con los diferentes campos del modelo Post.
-    - Cuando pulsemos el botón enviar, el formulario debe mandar al servicio la información del nuevo Post para que se almacene junto a los demás.
+    - Este componente representa un formulario con los diferentes campos del modelo Post. (OK)
+    - Cuando pulsemos el botón enviar, el formulario debe mandar al servicio la información del nuevo Post para que se almacene junto a los demás. (OK)
 
 Para subir nota:
-- Podemos usar localStorage para guardar la información de os posts creados
+- Podemos usar localStorage para guardar la información de os posts creados (FALTAAA)
 
 
 ----------------------------------------------------------------------------------------
 ##IMPLEMENTACIONES PROPIAS 
 
 El elemento post se va a repetir muchas veces por lo tanto seria necesario añadir un component tipo card que crease la estructura base de un post. De este modo cuando creemos más post todos tendrán la misma estructura:
-    - Crear un nuevo componente en components/card-post
-        - Crear la estructura de la card
-        - Realizar los métodos, rutas e imports correspondientes
-        - Incorporar dicho componente en la estrcutura html de ListaPosts
+    - Crear un nuevo componente en components/card-post (OK)
+        - Crear la estructura de la card (OK)
+        - Realizar los métodos, rutas e imports correspondientes (OK)
+        - Incorporar dicho componente en la estructura html de ListaPosts (OK)
 
 Como se trata de un blog sería ideal que tuviera la estructura normal de este tipo de webs/apps. Voy a implementar diferentes componentes que son fijos en un blog:
-    - Crear un componente en pages/Home:
-        - Crear la estructura de la Home 
-        - Realizar el routing correspondiente
-    - Crear un nuevo componente en components/NavBar
-        - Crear la estructura de la nav-bar 
-        - Realizar el routing correspondiente
-    - Crear un nuevo componente en components/Footer:
-        - Crear la estructura del footer 
-        - Realizar el routing en caso de ser necesario
+    - Crear un componente en pages/Home: (OK)
+        - Crear la estructura de la Home (OK)
+        - Realizar el routing correspondiente (OK)
+    - Crear un nuevo componente en components/NavBar (OK)
+        - Crear la estructura de la nav-bar  (OK)
+        - Realizar el routing correspondiente (OK)
+    - Crear un nuevo componente en components/Footer: (OK)
+        - Crear la estructura del footer  (OK)
+        - Realizar el routing en caso de ser necesario (OK)
 
 Los listados también tienen filtros para ordenadar la informacion:
-    - Crear filtro por categoria
-    - Crear filtro por autor
-    - Ordenar alfabeticamente
-    - Ordenar por fecha
+    - Crear filtro por categoria (OK)
+    - Crear filtro por autor (OK)
+    - Ordenar alfabeticamente (OK)
+    - Ordenar por fecha (OK)
+    - Comprobar que los filtros se pueden solapar (FALTAAA)
     
 Normalmente los blogs se ven listados de forma resumida y al clickar en ellos puedes acceder a otra página con el post completo. Para ello se necesita implementar lo siguiente:
-    -Crear un nuevo componente en pages/DetallePost
-    -Realizar los métodos, rutas e imports correspondientes
+    - Crear un nuevo componente en pages/DetallePost (OK)
+    - Realizar los métodos, rutas e imports correspondientes (OK)
+    - Verificar que los botones de editar y borrar funcionan dentro del detalle, y que el de ver detalle no aparece (OK)
 
+Añadir la posibilidad de borrar el post entero. Para ello se necesita implementar lo siguiente: 
+    - Crear un botón que permita borrar el post dentro del card-post component (OK)
 
 Tambien existe la posibilidad de editar los post sin tener que borrarlos y crearlos de cero. Para ello se necesita implementar lo siguiente:
-    - Crear un nuevo componente en pages/EditPost
-     -Realizar los métodos, rutas e imports correspondientes
+    - Crear un nuevo componente en pages/EditPost (OK)
+     -Realizar los métodos, rutas e imports correspondientes (OK)
+
+
+Ponerle estilo a toda la app (FALTAAA)
 
