@@ -35,9 +35,7 @@ export class FormularioComponent {
       title: "Post creado",
       confirmButtonText: "Aceptar",
     });
-    this.router.navigate(['/post'])
-    console.log(this.router.navigate(['posts']));
-
+    this.router.navigate(['/posts'])
   }
 
   /*   async onSubmit() {

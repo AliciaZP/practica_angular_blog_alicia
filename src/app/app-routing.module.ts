@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'posts', component: ListaPostsComponent },
   { path: 'posts/edit/:postTITLE', component: EditPostComponent },
   { path: 'posts/:postTITLE', component: DetallePostComponent },
-  { path: 'post/new', component: FormularioComponent },
+  { path: 'new', component: FormularioComponent },
   { path: '**', redirectTo: '/home' }
 ];
 
