@@ -1,40 +1,44 @@
-<section>
+<section class="px-5 py-4 text-black">
     <h2>LISTA DE POST</h2>
 
-    <div class="flex">
-        <div class="select">
-            <label class="form-label">Selecciona la categoría</label>
-            <select class="form-select" (change)="onChangeCategoria($event)">
-                <option value="">Todas las categorías</option>
-                <option *ngFor="let categoria of arrCategorias" [value]="categoria">{{categoria}}</option>
-            </select>
+    <div class="container-fluid row align-items-start py-4">
+        <div class="col-5">
+            <div>
+                <label>Selecciona la categoría</label>
+                <select class="mx-1" (change)="onChangeCategoria($event)">
+                    <option value="">Todas las categorías</option>
+                    <option *ngFor="let categoria of arrCategorias" [value]="categoria">{{categoria}}</option>
+                </select>
+            </div>
         </div>
-
-        <div class="select">
-            <label class="form-label">Selecciona el autor</label>
-            <select class="form-select" (change)="onChangeAutor($event)">
-                <option value="">Todos los autores</option>
-                <option *ngFor="let autor of arrAutores" [value]="autor">{{autor}}</option>
-            </select>
+        <div class="col-5">
+            <div>
+                <label>Selecciona el autor</label>
+                <select class="mx-1" (change)="onChangeAutor($event)">
+                    <option value="">Todos los autores</option>
+                    <option *ngFor="let autor of arrAutores" [value]="autor">{{autor}}</option>
+                </select>
+            </div>
         </div>
-
-        <div class="select">
-            <label class="form-label">Ordenar por título</label>
-            <select class="form-select" (change)="onChangeTitulo($event)">
-                <option value="A-Z">De la A a la Z</option>
-                <option value="Z-A">De la Z a la A</option>
-            </select>
+        <div class="col-2 align-items-end">
+            <div>
+                <label>Ordenar por título</label>
+                <select class="mx-1" (change)="onChangeTitulo($event)">
+                    <option value="A-Z">De la A a la Z</option>
+                    <option value="Z-A">De la Z a la A</option>
+                </select>
+            </div>
+            <div>
+                <label>Ordenar por fecha</label>
+                <select class="mx-1" (change)="onChangeFecha($event)">
+                    <option value="reciente">Más reciente</option>
+                    <option value="antiguo">Más antiguo</option>
+                </select>
+            </div>
         </div>
-
-        <div class="select">
-            <label class="form-label">Ordenar por fecha</label>
-            <select class="form-select" (change)="onChangeFecha($event)">
-                <option value="reciente">Más reciente a más antiguo</option>
-                <option value="antiguo">Más antiguo a más reciente</option>
-            </select>
-        </div>
-
     </div>
+
+
     <div>
         <card-post (borrarPostOutput)="onPostBorrado($event)" *ngFor="let post of arrPosts" [post]="post"></card-post>
     </div>

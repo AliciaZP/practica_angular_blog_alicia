@@ -1,14 +1,28 @@
-<div class="card-body">
-    <figure>
-        <img src="" alt="">
-    </figure>
-    <h3 class="card-title">{{post.titulo}}</h3>
-    <p class="card-text">{{post.texto}}</p>
-    <p class="card-text">Autor: {{post.autor}}</p>
-    <p class="card-text">Categoria: {{post.categoria}}</p>
-    <p class="card-text">Fecha del post: {{post.fecha | date:'dd/MM/yyyy'}}</p>
+<article class="row align-items-start p-3 mb-3">
 
-    <button *ngIf="botonActivo" [routerLink]="['/posts', post.titulo]">Ver detalle </button>
-    <button [routerLink]="['/posts','edit', post.titulo]">Editar post</button>
-    <button (click)="onClickDelete()">Borrar post</button>
-</div>
+    <div class="col-4">
+        <figure>
+            <img class="rounded" [src]="post.imagen" alt="">
+        </figure>
+    </div>
+    <div class="col-7 ">
+        <h3 class="fs-1 text my-3">{{post.titulo}}</h3>
+        <p class="my-4">Resumen: {{post.texto}} </p>
+        <div class="d-flex justify-content-between align-items-end">
+            <div>
+                <p class="pb-2">Autor: <span class="fst-italic fw-bold">{{post.autor}}</span></p>
+                <p>Categoría: <span class="fst-italic fw-bold">{{post.categoria}}</span></p>
+            </div>
+            <p>Publicado:<span class="fst-italic"> {{post.fecha | date:'dd/MM/yyyy'}}</span></p>
+        </div>
+    </div>
+    <div class="col-1">
+        <div class="pb-4" *ngIf="botonActivo" [routerLink]="['/posts', post.titulo]"><i
+                class="fa-solid fa-magnifying-glass-plus" style="color: #000000;"></i> </div>
+        <div class="pb-4" [routerLink]="['/posts','edit', post.titulo]"><i class="fa-solid fa-pen-to-square"
+                style="color: #000000;"></i></div>
+        <div class="pb-4" (click)="onClickDelete()"> <i class="fa-solid fa-trash-can" style="color: #000000;"></i>
+        </div>
+
+    </div>
+</article>

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../interfaces/post.interface';
-import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +11,9 @@ export class PostsService {
   constructor() {
     this.arrPosts = [{
       titulo: 'Los gatos y su comportamiento',
-      texto: 'Explora el fascinante mundo del comportamiento de los gatos y cómo se comunican con nosotros.',
+      texto: 'Los gatos, esos enigmáticos compañeros de cuatro patas, han cautivado a los humanos durante milenios con su gracia, independencia y misterioso comportamiento. Aunque cada gato es único, hay ciertos patrones de comportamiento que son comunes en la mayoría de estos felinos fascinantes.Los gatos, esos enigmáticos compañeros de cuatro patas, han cautivado a los humanos durante milenios con su gracia, independencia y misterioso comportamiento. Aunque cada gato es único, hay ciertos patrones de comportamiento que son comunes en la mayoría de estos felinos fascinantes.Los gatos, esos enigmáticos compañeros de cuatro patas, han cautivado a los humanos durante milenios con su gracia, independencia y misterioso comportamiento. Aunque cada gato es único, hay ciertos patrones de comportamiento que son comunes en la mayoría de estos felinos fascinantes.Los gatos, esos enigmáticos compañeros de cuatro patas, han cautivado a los humanos durante milenios con su gracia, independencia y misterioso comportamiento. Aunque cada gato es único, hay ciertos patrones de comportamiento que son comunes en la mayoría de estos felinos fascinantes.',
       autor: 'Alicia',
-      imagen: 'url_de_la_imagen_1.jpg',
+      imagen: 'https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg',
       fecha: new Date(2023, 1, 30),
       categoria: 'Razas de Gatos'
     },
@@ -22,7 +21,7 @@ export class PostsService {
       titulo: 'Razas de gatos populares',
       texto: 'Descubre las características únicas de algunas de las razas de gatos más populares en todo el mundo.',
       autor: 'Alicia',
-      imagen: 'url_de_la_imagen_2.jpg',
+      imagen: 'https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg',
       fecha: new Date(2013, 1, 30),
       categoria: 'Razas de Gatos'
     },
@@ -30,7 +29,7 @@ export class PostsService {
       titulo: 'Consejos para cuidar a tu gato en casa',
       texto: 'Aprende cómo proporcionar el mejor cuidado posible a tu gato dentro de tu hogar, desde la alimentación hasta el juego.',
       autor: 'Paco',
-      imagen: 'url_de_la_imagen_3.jpg',
+      imagen: 'https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg',
       fecha: new Date(2000, 1, 30),
       categoria: 'Cuidado del Gato'
     },
@@ -38,7 +37,7 @@ export class PostsService {
       titulo: 'Curiosidades felinas',
       texto: 'Explora curiosidades divertidas y sorprendentes sobre la vida de los gatos que quizás no conocías.',
       autor: 'Paco',
-      imagen: 'url_de_la_imagen_4.jpg',
+      imagen: 'https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg',
       fecha: new Date(1990, 1, 30),
       categoria: 'Curiosidades'
     },
@@ -46,7 +45,7 @@ export class PostsService {
       titulo: 'Gatos y su relación con los humanos',
       texto: 'Analiza la conexión especial entre los gatos y los humanos a lo largo de la historia y en la actualidad.',
       autor: 'Anónimo',
-      imagen: 'url_de_la_imagen_5.jpg',
+      imagen: 'https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg',
       fecha: new Date(2020, 1, 30),
       categoria: 'Cuidado del Gato'
     }]
