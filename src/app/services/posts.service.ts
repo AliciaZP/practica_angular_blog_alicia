@@ -111,14 +111,11 @@ export class PostsService {
     this.arrPosts = this.arrPosts.filter(post => post.titulo !== postTITLE);
   }
 
-  //es tipo void porque no necesita retornar nada
-  updateByTitulo(postTITLE: string, formularioEdit: Post): void {
-    //busco el índice del titulo que tiene mi post
+
+  updateByTitulo(postTITLE: string, formularioEdit: Partial<Post>): void {
     const postIndex = this.arrPosts.findIndex(post => post.titulo === postTITLE);
 
-    //verifico si el post con ese titulo existe, si no se encuentra === -1
     if (postIndex !== -1) {
-      //los ... son el spread operator que permite mezclar los datos nuevos(formularioEdit) con los existentes. Con esto solo se actualizan los que se han modificado
       this.arrPosts[postIndex] = { ...this.arrPosts[postIndex], ...formularioEdit };
     }
   }
