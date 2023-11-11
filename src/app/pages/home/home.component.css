@@ -1,11 +1,51 @@
-.flex {
-    display: flex;
-    justify-content: flex-start;
-    align-items: left;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
 #hero {
     background-color: lightblue;
+    padding: 8rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.0)), url(https://accuratesigns.net/wp-content/uploads/2020/04/Color-Spectrum-scaled-2560x1280.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+h2 {
+    font-size: 3.5rem;
+    ;
+}
+
+
+#lista-post {
+    background-color: green;
+    padding: 4rem;
+
+    &:hover {
+        color: black;
+    }
+}
+
+
+#aleatorios {
+    background-color: orange;
+    padding: 4rem;
+
+    &:hover {
+        color: black;
+    }
+}
+
+
+#crear-post {
+    background-color: crimson;
+    padding: 4rem;
+
+    &:hover {
+        color: black;
+    }
+}
+
+#otros {
+    background-color: dodgerblue;
+    padding: 4rem;
+
+    &:hover {
+        color: black;
+    }
 }

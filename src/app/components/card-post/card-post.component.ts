@@ -28,6 +28,8 @@ export class CardPostComponent {
     }
   }
 
+
+
   async onClickDelete() {
     const result = await Swal.fire({
       title: "Borrar post",
