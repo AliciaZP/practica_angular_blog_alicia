@@ -1,51 +1,205 @@
-#hero {
+/* #hero {
     background-color: lightblue;
     padding: 8rem;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.0)), url(https://accuratesigns.net/wp-content/uploads/2020/04/Color-Spectrum-scaled-2560x1280.jpg);
     background-position: center;
     background-size: cover;
 }
+ */
 
-h2 {
-    font-size: 3.5rem;
-    ;
+#hero {
+    position: relative;
+    padding-top: 10.1rem;
 }
 
+#secciones2 {
+    margin-top: 2rem;
+}
 
-#lista-post {
-    background-color: green;
-    padding: 4rem;
+#secciones3 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 8rem;
+    margin-right: 40rem;
+}
+
+span {
+    font-size: 6rem;
+    color: black;
+}
+
+article {
+    width: 15rem;
+    height: 12rem;
+    background-color: white;
+    padding-top: 2rem;
+    color: black;
+    cursor: pointer;
+    /*     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 10%, rgba(0, 212, 255, 1) 100%); */
 
     &:hover {
-        color: black;
+        transform: scale(1.2);
+        background-color: white;
+        color: white;
     }
 }
 
 
-#aleatorios {
-    background-color: orange;
-    padding: 4rem;
+.cuadro {
+    position: relative;
+}
 
-    &:hover {
-        color: black;
-    }
+h3 {
+    padding-top: 8.3rem;
+}
+
+i {
+    display: inline-block;
+    position: absolute;
+    left: 12rem;
+    top: -1rem;
+}
+
+#bloque1 {
+    background-color: #FF0000;
+}
+
+#bloque2 {
+    background-color: #FFA500;
+}
+
+#bloque3 {
+    background-color: #008000;
+}
+
+#bloque4 {
+    background-color: #0000FF;
+}
+
+#bloque5 {
+    background-color: #9400D3;
 }
 
 
-#crear-post {
-    background-color: crimson;
-    padding: 4rem;
+#bloque6 {
+    background-color: #FFCCCC;
+    /* Rojo pastel */
+}
 
-    &:hover {
-        color: black;
+#bloque7 {
+    background-color: #FFD699;
+    /* Naranja pastel */
+}
+
+#bloque8 {
+    background-color: #B3FFB3;
+    /* Verde pastel */
+}
+
+#bloque9 {
+    background-color: #B3B3FF;
+    /* Azul pastel */
+}
+
+#bloque10 {
+    background-color: #E6CCFF;
+    /* Violeta pastel */
+}
+
+
+#bloque11 {
+    background-color: #0A0A0A;
+    /* Negro */
+}
+
+#bloque12 {
+    background-color: #333333;
+    /* Gris oscuro */
+}
+
+#bloque13 {
+    background-color: #666666;
+    /* Gris medio */
+}
+
+#bloque14 {
+    background-color: #999999;
+    /* Gris claro */
+}
+
+#bloque15 {
+    background-color: #E5E5E5;
+    /* Blanco */
+}
+
+.color-bar {
+    height: 25rem;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: rainbow 18s ease infinite;
+    -z-animation: rainbow 18s ease infinite;
+    -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
     }
 }
 
-#otros {
-    background-color: dodgerblue;
-    padding: 4rem;
+@-moz-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
 
-    &:hover {
-        color: black;
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-o-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
     }
 }
