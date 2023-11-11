@@ -39,6 +39,8 @@ Para subir nota:
 ----------------------------------------------------------------------------------------
 ##IMPLEMENTACIONES PROPIAS 
 
+Para poder trabajar correctamente creo una BD con un import POSTS que contiene 10 objetos ya creados que cumplen con la interfaz POST. 
+
 El elemento post se va a repetir muchas veces por lo tanto seria necesario añadir un component tipo card que crease la estructura base de un post. De este modo cuando creemos más post todos tendrán la misma estructura:
     - Crear un nuevo componente en components/card-post (OK)
         - Crear la estructura de la card (OK)
