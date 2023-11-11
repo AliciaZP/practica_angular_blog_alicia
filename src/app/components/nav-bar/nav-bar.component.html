@@ -1,13 +1,14 @@
 <div>
     <nav class="px-5 py-4 bg-black fixed-top ">
         <ul class="d-flex justify-content-start align-items-center gap-5 ">
-            <li [routerLink]="['home']"><i class="fa-solid fa-house bloque1"></i>
+            <li [routerLink]="['home']"><i class="fa-solid fa-house"></i>
                 Home</li>
-            <li [routerLink]="['posts']"><i class="fa-solid fa-list-ul bloque2"></i> Lista de post</li>
+            <li [routerLink]="['posts']"><i class="fa-solid fa-list-ul bloque1"></i> Lista de Posts</li>
+            <li [routerLink]="['posts']"><i class="fa-regular fa-star bloque2"></i> Favorito Aleatorio</li>
             <li class="flex-grow-1" [routerLink]="['new']"><i class="fa-regular fa-square-plus bloque3"></i>
-                Nuevo post</li>
+                Añadir nuevo Post</li>
             <li [routerLink]="['home']"><i class="fa-solid fa-user-plus bloque4"></i> Registrarse</li>
-            <li [routerLink]="['home']"><i class="fa-solid fa-user-lock bloque5"></i> Loggin</li>
+            <li [routerLink]="['home']"><i class="fa-solid fa-user-lock bloque5"></i> Login</li>
         </ul>
     </nav>
 </div>

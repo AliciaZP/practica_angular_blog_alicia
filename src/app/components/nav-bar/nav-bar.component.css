@@ -6,10 +6,8 @@
 li {
     cursor: pointer;
     color: white;
+    text-transform: uppercase;
 }
-
-i {}
-
 
 .bloque1 {
     color: #FF0000;
