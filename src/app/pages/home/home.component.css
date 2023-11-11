@@ -9,15 +9,11 @@
 
 #hero {
     position: relative;
-    padding-top: 10.1rem;
+    padding-top: 9.1rem;
 }
 
-#secciones2 {
-    margin-top: 2rem;
-}
 
 #secciones3 {
-    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -35,6 +31,7 @@ article {
     width: 15rem;
     height: 12rem;
     background-color: white;
+    margin-top: 2rem;
     padding-top: 2rem;
     color: black;
     cursor: pointer;
@@ -136,7 +133,7 @@ i {
 }
 
 .color-bar {
-    height: 25rem;
+    height: 24rem;
     width: 100%;
     position: absolute;
     background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
