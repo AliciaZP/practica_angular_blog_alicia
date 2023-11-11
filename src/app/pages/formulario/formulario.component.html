@@ -1,34 +1,71 @@
-<section id="formulario" class="text-white p-5 mt-5 pe-5">
-    <form [formGroup]='nuevoPost' (ngSubmit)="onSubmit()">
+<section id="formulario" class="text-white p-5 mt-5">
+    <form class="text-uppercase row justify-content-between align-items-start" [formGroup]='nuevoPost'
+        (ngSubmit)="onSubmit()">
+        <h2 class="pb-5">NUEVO POST</h2>
+        <div class="col-1 pb-3">
+            <label class="bloque2 pb-5">Autor:</label>
+            <label class="bloque3 pb-5">Categoría:</label>
+            <label class="bloque4 pb-5">Fecha:</label>
+            <label class="bloque5 pb-5">Imagen:</label>
+            <label class="bloque1 pb-5">Título:</label>
+            <label class="bloque1 pb-0">Texto:</label>
+        </div>
 
-        <h2>NUEVO POST</h2>
+        <div class="col-10">
+            <input class="bloque2i p-1" type="text" formControlName='autor'
+                placeholder="Inserta aquí el autor del post">
+            <input class="bloque3i p-1" type="text" formControlName='categoria'
+                placeholder="Inserta aquí la categoría del post">
+            <input class="bloque4i p-1" type="text" formControlName='fecha'
+                placeholder="Inserta aquí la fecha del post">
+            <input class="bloque5i resizable-input p-1" type="text" formControlName='imagen'
+                placeholder="Inserta aquí la url de la imagen del post">
+            <input class="bloque1i p-1" type="text" formControlName='titulo'
+                placeholder="Inserta aquí el titulo del post">
+            <textarea class="resizable-input pb-5" type="text" formControlName='texto'
+                placeholder="Inserta aquí texto del post"></textarea>
+        </div>
+    </form>
 
-        <div>
-            <label>Titulo</label>
+    <div class="button pt-5">
+        <input type="submit" class="boton" value="Añadir nuevo post">
+    </div>
+</section>
+
+
+
+
+<!-- 
+<section id="formulario" class="text-white p-5 mt-5">
+    <form class="text-uppercase" [formGroup]='nuevoPost' (ngSubmit)="onSubmit()">
+
+        <h2 class="pb-5">NUEVO POST</h2>
+
+        <div class="pb-4">
+            <label>TÍtulo</label>
             <input type="text" formControlName='titulo'>
         </div>
-        <div>
-            <label>Texto</label>
-            <input type="text" formControlName='texto'>
-        </div>
-        <div>
+
+        <div class="pb-4">
             <label>Autor</label>
             <input type="text" formControlName='autor'>
         </div>
-
-        <div>
-            <label>Imagen</label>
-            <input type="text" formControlName='imagen'>
+        <div class="pb-4">
+            <label>Categoríaa</label>
+            <input type="text" formControlName='categoria'>
         </div>
-        <div>
+        <div class="pb-4">
             <label>Fecha</label>
             <input type="text" formControlName='fecha'>
         </div>
-        <div>
-            <label>Categoria</label>
-            <input type="text" formControlName='categoria'>
+        <div class="pb-4">
+            <label>Imagen</label>
+            <input type="text" formControlName='imagen'>
         </div>
-
+        <div class="pb-4">
+            <label>Texto</label>
+            <input type="text" formControlName='texto'>
+        </div>
         <input type="submit" class="boton" value="Añadir nuevo post">
     </form>
-</section>
+</section> -->
