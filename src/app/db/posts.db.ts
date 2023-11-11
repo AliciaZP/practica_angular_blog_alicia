@@ -1,6 +1,6 @@
 import { Post } from '../interfaces/post.interface';
 
-const POSTS: Post[] = [
+export const POSTS: Post[] = [
     {
         titulo: "Teoría del Rojo",
         texto: "El rojo es un color cálido y apasionado que evoca emociones fuertes y enérgicas. Este tono vibrante ha sido significativo a lo largo de la historia, simbolizando una amplia gama de conceptos y sentimientos. En la naturaleza, el rojo se asocia con elementos poderosos como el fuego y la sangre, transmitiendo un sentido de vitalidad y peligro.Culturalmente, el rojo ha sido utilizado en ceremonias y celebraciones para representar la buena suerte y la prosperidad.En el mundo del arte, numerosos artistas han empleado el rojo para destacar y expresar emociones intensas.En términos de diseño, el rojo es a menudo utilizado para captar la atención del espectador y transmitir una sensación de urgencia.Desde el punto de vista psicológico, el rojo se ha asociado con la estimulación del apetito y la activación del sistema nervioso.En general, la teoría del color atribuye al rojo cualidades emocionales y físicas que lo convierten en un elemento fascinante y versátil.",
@@ -23,7 +23,7 @@ const POSTS: Post[] = [
         autor: "Ecologista de colores",
         imagen: "url_de_la_imagen_verde.jpg",
         fecha: new Date(2021, 1, 30),
-        categoria: "Teoría del Color"
+        categoria: "Naturaleza"
     },
     {
         titulo: "Amarillo: La Luz del Sol",
@@ -31,7 +31,7 @@ const POSTS: Post[] = [
         autor: "Especialista en luminosidad",
         imagen: "url_de_la_imagen_amarillo.jpg",
         fecha: new Date(2020, 1, 30),
-        categoria: "Teoría del Color"
+        categoria: "Naturaleza"
     },
     {
         titulo: "Naranja y Creatividad",
@@ -55,7 +55,7 @@ const POSTS: Post[] = [
         autor: "Especialista en colores dulces",
         imagen: "url_de_la_imagen_rosado.jpg",
         fecha: new Date(2017, 1, 30),
-        categoria: "Teoría del Color"
+        categoria: "Sentimientos"
     },
     {
         titulo: "Marrón y Naturalidad",
@@ -71,7 +71,7 @@ const POSTS: Post[] = [
         autor: "Experto en colores neutros",
         imagen: "url_de_la_imagen_gris.jpg",
         fecha: new Date(2015, 1, 30),
-        categoria: "Teoría del Color"
+        categoria: "Sentimientos"
     },
     {
         titulo: "Negro Elegante",
@@ -79,6 +79,6 @@ const POSTS: Post[] = [
         autor: "Estilista del negro",
         imagen: "url_de_la_imagen_negro.jpg",
         fecha: new Date(2014, 1, 30),
-        categoria: "Teoría del Color"
+        categoria: "Sentimientos"
     },
 ];

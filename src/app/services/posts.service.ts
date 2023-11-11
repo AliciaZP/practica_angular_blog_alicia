@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { POSTS } from '../db/posts.db'
 import { Post } from '../interfaces/post.interface';
 
 @Injectable({
@@ -6,50 +7,8 @@ import { Post } from '../interfaces/post.interface';
 })
 export class PostsService {
 
-  private arrPosts: Post[];
-
-  constructor() {
-    this.arrPosts = [{
-      titulo: 'Los gatos y su comportamiento',
-      texto: 'Los gatos, esos enigmáticos compañeros de cuatro patas, han cautivado a los humanos durante milenios con su gracia, independencia y misterioso comportamiento. Aunque cada gato es único, hay ciertos patrones de comportamiento que son comunes en la mayoría de estos felinos fascinantes.Los gatos, esos enigmáticos compañeros de cuatro patas, han cautivado a los humanos durante milenios con su gracia, independencia y misterioso comportamiento. Aunque cada gato es único, hay ciertos patrones de comportamiento que son comunes en la mayoría de estos felinos fascinantes.Los gatos, esos enigmáticos compañeros de cuatro patas, han cautivado a los humanos durante milenios con su gracia, independencia y misterioso comportamiento. Aunque cada gato es único, hay ciertos patrones de comportamiento que son comunes en la mayoría de estos felinos fascinantes.Los gatos, esos enigmáticos compañeros de cuatro patas, han cautivado a los humanos durante milenios con su gracia, independencia y misterioso comportamiento. Aunque cada gato es único, hay ciertos patrones de comportamiento que son comunes en la mayoría de estos felinos fascinantes.',
-      autor: 'Alicia',
-      imagen: 'https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg',
-      fecha: new Date(2023, 1, 30),
-      categoria: 'Razas de Gatos'
-    },
-    {
-      titulo: 'Razas de gatos populares',
-      texto: 'Descubre las características únicas de algunas de las razas de gatos más populares en todo el mundo.',
-      autor: 'Alicia',
-      imagen: 'https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg',
-      fecha: new Date(2013, 1, 30),
-      categoria: 'Razas de Gatos'
-    },
-    {
-      titulo: 'Consejos para cuidar a tu gato en casa',
-      texto: 'Aprende cómo proporcionar el mejor cuidado posible a tu gato dentro de tu hogar, desde la alimentación hasta el juego.',
-      autor: 'Paco',
-      imagen: 'https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg',
-      fecha: new Date(2000, 1, 30),
-      categoria: 'Cuidado del Gato'
-    },
-    {
-      titulo: 'Curiosidades felinas',
-      texto: 'Explora curiosidades divertidas y sorprendentes sobre la vida de los gatos que quizás no conocías.',
-      autor: 'Paco',
-      imagen: 'https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg',
-      fecha: new Date(1990, 1, 30),
-      categoria: 'Curiosidades'
-    },
-    {
-      titulo: 'Gatos y su relación con los humanos',
-      texto: 'Analiza la conexión especial entre los gatos y los humanos a lo largo de la historia y en la actualidad.',
-      autor: 'Anónimo',
-      imagen: 'https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg',
-      fecha: new Date(2020, 1, 30),
-      categoria: 'Cuidado del Gato'
-    }]
-  }
+  //Los POSTS son una base de datos creada por mi, como los import no se pueden editar. Creo un array editable y trabajo sobre él a partir de la copia de POST
+  private arrPosts: Post[] = [...POSTS];
 
   create(pPost: Post) {
     this.arrPosts.push(pPost)
