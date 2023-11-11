@@ -1,5 +1,6 @@
 <div id="hero" class="color-bar row justify-content-between align-items-end">
-    <h1 class="fw-bold px-5 text-black col-7">TEORIA DEL<span class="text-gradient"> COLOR</span></h1>
+    <h1 class="fw-bold px-5 text-black col-7">TEORIA DEL<span class="text-gradient">
+            COLOR</span></h1>
     <img class="col-5" src="https://blog.zohowebstatic.com/sites/zblogs/images/show/color-wheel-2x-2020-12.png" alt="">
 </div>
 
@@ -7,35 +8,35 @@
 <div id="secciones" class="ps-4 row justify-content-between align-items-center">
 
     <section id="secciones2" class="px-5 row justify-content-between align-items-center">
-        <article id="bloque1" class="col-2 ">
+        <article [routerLink]="['/posts']" id="bloque1" class="col-2">
             <div class="cuadro">
                 <i class="fa-solid fa-eye-dropper"></i>
                 <h3 class="fw-bold fs-2">LISTADO</h3>
             </div>
         </article>
 
-        <article id="bloque2" class="col-2">
+        <article [routerLink]="['/fav']" id="bloque2" class="col-2">
             <div class="cuadro">
                 <i class="fa-solid fa-eye-dropper"></i>
                 <h3 class="fw-bold fs-2">FAVORITO</h3>
             </div>
         </article>
 
-        <article id="bloque3" class="col-2">
+        <article [routerLink]="['/new']" id="bloque3" class="col-2">
             <div class="cuadro">
                 <i class="fa-solid fa-eye-dropper"></i>
                 <h3 class="fw-bold fs-2">NUEVO</h3>
             </div>
         </article>
 
-        <article id="bloque4" class="col-2">
+        <article [routerLink]="['/register']" id="bloque4" class="col-2">
             <div class="cuadro">
                 <i class="fa-solid fa-eye-dropper"></i>
                 <h3 class="fw-bold fs-2">REGISTRO</h3>
             </div>
         </article>
 
-        <article id="bloque5" class="col-2">
+        <article [routerLink]="['/login']" id="bloque5" class="col-2">
             <div class="cuadro">
                 <i class="fa-solid fa-eye-dropper"></i>
                 <h3 class="fw-bold fs-2">LOGIN</h3>

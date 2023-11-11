@@ -62,18 +62,6 @@ span {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 article {
     width: 15rem;
     height: 12rem;
@@ -82,7 +70,6 @@ article {
     padding-top: 2rem;
     color: black;
     cursor: pointer;
-    /*     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 10%, rgba(0, 212, 255, 1) 100%); */
 
     &:hover {
         transform: scale(1.2);
@@ -109,6 +96,7 @@ i {
 
 #bloque1 {
     background-color: #FF0000;
+    /*     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 10%, rgba(255, 0, 0, 1) 100%); */
 }
 
 #bloque2 {
