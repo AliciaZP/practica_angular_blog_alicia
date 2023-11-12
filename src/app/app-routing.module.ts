@@ -5,6 +5,7 @@ import { FormularioComponent } from './pages/formulario/formulario.component';
 import { DetallePostComponent } from './pages/detalle-post/detalle-post.component';
 import { EditPostComponent } from './pages/edit-post/edit-post.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'posts/edit/:postTITLE', component: EditPostComponent },
   { path: 'posts/:postTITLE', component: DetallePostComponent },
   { path: 'new', component: FormularioComponent },
+  { path: 'error', component: ErrorComponent },
   { path: '**', redirectTo: '/home' }
 ];
 
