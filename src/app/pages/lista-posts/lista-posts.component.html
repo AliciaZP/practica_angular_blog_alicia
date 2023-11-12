@@ -1,11 +1,11 @@
 <section class="px-5 mt-5 text-white">
     <h2 class="pt-5 pb-5">LISTA DE POST</h2>
 
-    <div class="d-flex justify-content-between align-items-center gap-2">
+    <div class="d-flex justify-content-evenly align-items-center gap-2">
         <div>
             <div>
                 <label>Selecciona la categoría</label>
-                <select class="bloque2 mx-1" (change)="onChangeCategoria($event)">
+                <select class="bloque2 mx-1 d-block" (change)="onChangeCategoria($event)">
                     <option class="bloque2" value="">Todas las categorías</option>
                     <option class="bloque2" *ngFor="let categoria of arrCategorias" [value]="categoria">{{categoria}}
                     </option>
@@ -15,7 +15,7 @@
         <div>
             <div>
                 <label>Selecciona el autor</label>
-                <select class="bloque3 mx-1" (change)="onChangeAutor($event)">
+                <select class="bloque3 mx-1 d-block" (change)="onChangeAutor($event)">
                     <option class="bloque3" value="">Todos los autores</option>
                     <option class="bloque3" *ngFor="let autor of arrAutores" [value]="autor">{{autor}}</option>
                 </select>
@@ -24,7 +24,7 @@
         <div>
             <div>
                 <label>Ordenar por título</label>
-                <select class="bloque4 mx-1" (change)="onChangeTitulo($event)">
+                <select class="bloque4 mx-1 d-block" (change)="onChangeTitulo($event)">
                     <option class="bloque4" value="A-Z">De la A a la Z</option>
                     <option class="bloque4" value="Z-A">De la Z a la A</option>
                 </select>
@@ -33,7 +33,7 @@
         <div>
             <div>
                 <label>Ordenar por fecha</label>
-                <select class="bloque5 mx-1" (change)="onChangeFecha($event)">
+                <select class="bloque5 mx-1 d-block" (change)="onChangeFecha($event)">
                     <option class="bloque5" value="reciente">Más reciente</option>
                     <option class="bloque5" value="antiguo">Más antiguo</option>
                 </select>
