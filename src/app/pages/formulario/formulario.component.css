@@ -1,5 +1,5 @@
 #formulario {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 
 }
 
@@ -88,6 +88,13 @@ textarea::placeholder {
     font-style: italic;
 }
 
-button {
-    width: 20px;
+.button {
+    width: 10rem;
+    height: 3rem;
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    right: 3rem;
+    border: none;
 }

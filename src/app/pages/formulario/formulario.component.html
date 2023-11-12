@@ -1,7 +1,8 @@
 <section id="formulario" class="text-white p-5 mt-5">
+    <h2 class="pb-5">NUEVO POST</h2>
     <form class="text-uppercase row justify-content-between align-items-start" [formGroup]='nuevoPost'
         (ngSubmit)="onSubmit()">
-        <h2 class="pb-5">NUEVO POST</h2>
+
         <div class="col-1 pb-3">
             <label class="bloque2 pb-5">Autor:</label>
             <label class="bloque3 pb-5">Categoría:</label>
@@ -25,10 +26,11 @@
             <textarea class="resizable-input pb-5" type="text" formControlName='texto'
                 placeholder="Inserta aquí texto del post"></textarea>
         </div>
+
     </form>
 
-    <div class="button pt-5">
-        <input type="submit" class="boton" value="Añadir nuevo post">
+    <div class="pt-5">
+        <input class="button" type="submit" value="Subir post">
     </div>
 </section>
 
