@@ -1,0 +1,62 @@
+h2 {
+    font-size: 7rem;
+    color: #FF0000;
+}
+
+section .found {
+    font-size: 2rem;
+}
+
+
+#bloque1 {
+    background-color: #FF0000;
+
+}
+
+#bloque2 {
+    background-color: #FFA500;
+}
+
+#bloque3 {
+    background-color: #008000;
+}
+
+
+#bloque4 {
+    background-color: #0000FF;
+}
+
+#bloque5 {
+    background-color: #9400D3;
+}
+
+article {
+    width: 15rem;
+    height: 12rem;
+    background-color: white;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    color: black;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2);
+        background-color: white;
+        color: white;
+    }
+}
+
+.cuadro {
+    position: relative;
+}
+
+h3 {
+    margin-top: 7.5rem;
+}
+
+i {
+    display: inline-block;
+    position: absolute;
+    left: 12rem;
+    top: -8.5rem;
+}
