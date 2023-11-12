@@ -1,0 +1,101 @@
+#formulario {
+    margin-bottom: 5rem;
+
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+input {
+    display: inline;
+    width: 100%;
+    margin-bottom: 2.1rem;
+}
+
+label {
+    width: 100%;
+}
+
+.resizable-input {
+    width: 100%;
+    resize: right;
+    overflow: auto;
+}
+
+.bloque1 {
+    color: #FF0000;
+}
+
+.bloque2 {
+    color: #FFA500;
+}
+
+.bloque3 {
+    color: #008000;
+}
+
+.bloque4 {
+    color: #0000FF;
+}
+
+.bloque5 {
+    color: #9400D3;
+}
+
+.bloque1i:focus {
+    outline: none;
+    box-shadow: 0 0 0px 3px rgba(255, 0, 0, 1);
+}
+
+.bloque2i:focus {
+    outline: none;
+    box-shadow: 0 0 0px 3px rgba(255, 165, 0, 1);
+}
+
+.bloque3i:focus {
+    outline: none;
+    box-shadow: 0 0 0px 3px rgba(0, 128, 0, 1);
+}
+
+.bloque4i:focus {
+    outline: none;
+    box-shadow: 0 0 0px 3px rgba(0, 0, 255, 1);
+}
+
+.bloque5i:focus {
+    outline: none;
+    box-shadow: 0 0 0px 3px rgba(148, 0, 211, 1);
+}
+
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0px 3px rgba(255, 0, 0, 1);
+}
+
+input::placeholder {
+    color: lightslategrey;
+    font-style: italic;
+}
+
+textarea::placeholder {
+    color: lightslategrey;
+    font-style: italic;
+}
+
+.button {
+    width: 10rem;
+    height: 3rem;
+    background-color: rgba(0, 128, 0, 1);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    right: 3rem;
+    border: none;
+
+    &:hover {
+        background-color: rgba(0, 128, 0, 1);
+        color: black;
+    }
+}

@@ -68,12 +68,7 @@ label {
     box-shadow: 0 0 0px 3px rgba(148, 0, 211, 1);
 }
 
-textarea {
-    color: #FF0000;
-}
-
 textarea:focus {
-
     outline: none;
     box-shadow: 0 0 0px 3px rgba(255, 0, 0, 1);
 }

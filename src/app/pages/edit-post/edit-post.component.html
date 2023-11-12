@@ -1,32 +1,34 @@
-<form class="container" [formGroup]="formularioEdit" (ngSubmit)="onSubmit()">
+<section id="formulario" class="text-white p-5 mt-5">
+    <h2 class="pb-5">EDITAR POST</h2>
+    <form class="text-uppercase row justify-content-between align-items-start" [formGroup]='formularioEdit'
+        (ngSubmit)="onSubmit()">
 
-    <h2>EDITOR DE POST</h2>
+        <div class="col-1 pb-3">
+            <label class="bloque2 pb-5">Autor:</label>
+            <label class="bloque3 pb-5">Categoría:</label>
+            <label class="bloque4 pb-5">Fecha:</label>
+            <label class="bloque5 pb-5">Imagen:</label>
+            <label class="bloque1 pb-5">Título:</label>
+            <label class="bloque1 pb-0">Texto:</label>
+        </div>
 
-    <div class="form-group">
-        <label>Titulo</label>
-        <input type="text" class="form-control" formControlName='titulo'>
-    </div>
-    <div class="form-group">
-        <label>Texto</label>
-        <input type="text" class="form-control" formControlName='texto'>
-    </div>
-    <div class="form-group">
-        <label>Autor</label>
-        <input type="text" class="form-control" formControlName='autor'>
-    </div>
+        <div class="col-10">
+            <input class="bloque2i p-1" type="text" formControlName='autor'
+                placeholder="Inserta aquí el autor del post">
+            <input class="bloque3i p-1" type="text" formControlName='categoria'
+                placeholder="Inserta aquí la categoría del post">
+            <input class="bloque4i p-1" type="text" formControlName='fecha'
+                placeholder="Inserta aquí la fecha del post">
+            <input class="bloque5i resizable-input p-1" type="text" formControlName='imagen'
+                placeholder="Inserta aquí la url de la imagen del post">
+            <input class="bloque1i p-1" type="text" formControlName='titulo'
+                placeholder="Inserta aquí el titulo del post">
+            <textarea class="resizable-input pb-5" type="text" formControlName='texto'
+                placeholder="Inserta aquí texto del post"></textarea>
+        </div>
+        <div class="pt-5">
+            <input class="button" type="submit" value="Editar post">
+        </div>
+    </form>
 
-    <div class="form-group">
-        <label>Imagen</label>
-        <input type="text" class="form-control" formControlName='imagen'>
-    </div>
-    <div class="form-group">
-        <label>Fecha</label>
-        <input type="text" class="form-control" formControlName='fecha'>
-    </div>
-    <div class="form-group">
-        <label>Categoria</label>
-        <input type="text" class="form-control" formControlName='categoria'>
-    </div>
-
-    <input type="submit" class="boton" value="editar post">
-</form>
+</section>
