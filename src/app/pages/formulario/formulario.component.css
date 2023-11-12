@@ -91,10 +91,16 @@ textarea::placeholder {
 .button {
     width: 10rem;
     height: 3rem;
-    background-color: white;
+    background-color: rgba(0, 128, 0, 1);
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
     position: absolute;
     right: 3rem;
     border: none;
+
+    &:hover {
+        background-color: rgba(0, 128, 0, 1);
+        color: black;
+    }
 }
