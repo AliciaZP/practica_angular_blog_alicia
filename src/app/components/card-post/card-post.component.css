@@ -1,5 +1,5 @@
 img {
-    width: 400px;
+    width: 100%
 }
 
 i {
@@ -8,5 +8,42 @@ i {
 
     &:hover {
         cursor: pointer
+    }
+}
+
+
+
+.favorito i {
+    color: black;
+
+    &:hover {
+        color: #FFA500;
+    }
+}
+
+.comentario i {
+    color: black;
+
+    &:hover {
+        color: #9400D3;
+    }
+}
+
+.detalle i {
+    &:hover {
+        color: #008000;
+
+    }
+}
+
+.editar i {
+    &:hover {
+        color: #0000FF;
+    }
+}
+
+.borrar i {
+    &:hover {
+        color: #FF0000;
     }
 }

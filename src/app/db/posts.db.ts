@@ -5,7 +5,7 @@ export const POSTS: Post[] = [
         titulo: "Teoría del Rojo",
         texto: "El rojo es un color cálido y apasionado que evoca emociones fuertes y enérgicas. Este tono vibrante ha sido significativo a lo largo de la historia, simbolizando una amplia gama de conceptos y sentimientos. En la naturaleza, el rojo se asocia con elementos poderosos como el fuego y la sangre, transmitiendo un sentido de vitalidad y peligro.Culturalmente, el rojo ha sido utilizado en ceremonias y celebraciones para representar la buena suerte y la prosperidad.\nEn el mundo del arte, numerosos artistas han empleado el rojo para destacar y expresar emociones intensas.En términos de diseño, el rojo es a menudo utilizado para captar la atención del espectador y transmitir una sensación de urgencia.Desde el punto de vista psicológico, el rojo se ha asociado con la estimulación del apetito y la activación del sistema nervioso.En general, la teoría del color atribuye al rojo cualidades emocionales y físicas que lo convierten en un elemento fascinante y versátil.",
         autor: "Experto en colores",
-        imagen: "https://www.researchgate.net/publication/281089718/figure/fig5/AS:284478913171468@1444836466666/The-Colour-Wheel-Image-with-permission-from-wwwartyfactorycom.png",
+        imagen: "https://i.pinimg.com/originals/2b/81/0a/2b810a99ff502c1719ee900564b16878.jpg",
         fecha: new Date(2023, 1, 30),
         categoria: "Teoría del Color"
     },

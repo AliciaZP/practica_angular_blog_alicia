@@ -1,28 +1,39 @@
-<article class="row align-items-start p-3 mb-3 bg-white text-black">
+<article class="row align-items-start ps-2 pb-2 p-4 mt-5 bg-white text-black">
 
-    <div class="col-4">
+    <div class="col-5">
         <figure>
-            <img class="rounded" [src]="post.imagen" alt="">
+            <img [src]="post.imagen" alt="imgen del post">
         </figure>
-    </div>
-    <div class="col-7 ">
-        <h3 class="fs-1 text my-3">{{post.titulo}}</h3>
-        <p class="my-4">Resumen: {{post.texto}} </p>
-        <div class="d-flex justify-content-between align-items-end">
-            <div>
-                <p class="pb-2">Autor: <span class="fst-italic fw-bold">{{post.autor}}</span></p>
-                <p>Categoría: <span class="fst-italic fw-bold">{{post.categoria}}</span></p>
+        <div class="d-flex gap-5 ps-2 pt-2">
+            <div class="favorito pb-4"><i class="pe-2 d-inline fa-solid fa-star"></i><small>Favorito</small> </div>
+            <div class="comentario pb-4"><i class="pe-2 d-inline fa-solid fa-comment"></i><small>Comentario</small>
             </div>
-            <p>Publicado:<span class="fst-italic"> {{post.fecha | date:'dd/MM/yyyy'}}</span></p>
         </div>
     </div>
-    <div class="col-1">
-        <div class="pb-4" *ngIf="botonActivo" [routerLink]="['/posts', post.titulo]"><i
-                class="fa-solid fa-magnifying-glass-plus" style="color: #000000;"></i> </div>
-        <div class="pb-4" [routerLink]="['/posts','edit', post.titulo]"><i class="fa-solid fa-pen-to-square"
-                style="color: #000000;"></i></div>
-        <div class="pb-4" (click)="onClickDelete()"> <i class="fa-solid fa-trash-can" style="color: #000000;"></i>
+
+    <div class="col-7">
+        <div>
+            <h3 class="fs-1">{{post.titulo}}</h3>
+            <p class="pt-3">{{post.texto}} </p>
+            <div class="pt-4 d-flex justify-content-between">
+                <div>
+                    <p class="pb-2">Autor: <span class="fst-italic fw-bold">{{post.autor}}</span></p>
+                    <p>Categoría: <span class="fst-italic fw-bold">{{post.categoria}}</span></p>
+                </div>
+                <p>Publicado:<span class="fst-italic"> {{post.fecha | date:'dd/MM/yyyy'}}</span></p>
+            </div>
         </div>
 
+        <div class="pt-3">
+            <div class="d-flex justify-content-end gap-4 pb-2">
+                <div class=" detalle" *ngIf="botonActivo" [routerLink]="['/posts', post.titulo]"><i
+                        class="fa-solid fa-magnifying-glass-plus"></i> </div>
+                <div class=" editar" [routerLink]="['/posts','edit', post.titulo]"><i
+                        class="fa-solid fa-pen-to-square"></i></div>
+                <div class="borrar" (click)="onClickDelete()"> <i class="fa-solid fa-trash-can"></i>
+                </div>
+            </div>
+        </div>
     </div>
+
 </article>
