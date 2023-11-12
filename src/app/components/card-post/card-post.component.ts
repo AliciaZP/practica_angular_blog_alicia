@@ -36,10 +36,12 @@ export class CardPostComponent {
       text: "¿Quieres borrar el post?",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#6495ED",
-      cancelButtonColor: "#000000",
+      confirmButtonColor: "#008000",
+      cancelButtonColor: "#FF0000",
       confirmButtonText: "Borrar",
       cancelButtonText: "Cancelar",
+      color: "white",
+      background: "black",
     })
     if (result.isConfirmed) {
       this.borrarPostOutput.emit(this.post.titulo);
@@ -47,3 +49,4 @@ export class CardPostComponent {
     }
   }
 }
+

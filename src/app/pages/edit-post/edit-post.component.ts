@@ -45,7 +45,9 @@ export class EditPostComponent {
       icon: "success",
       title: "Post editado",
       confirmButtonText: "Aceptar",
-      confirmButtonColor: "#6495ED",
+      confirmButtonColor: "#008000",
+      color: "white",
+      background: "black",
     });
     this.router.navigate(['/posts'])
   }

@@ -34,9 +34,38 @@ export class FormularioComponent {
       icon: "success",
       title: "Post creado",
       confirmButtonText: "Aceptar",
+      confirmButtonColor: "#008000",
+      color: "white",
+      background: "black",
     });
     this.router.navigate(['/posts'])
   }
+
+
+  /* 
+    bloque1 {
+      background-color: #FF0000;
+      /*     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 10%, rgba(255, 0, 0, 1) 100%); 
+  }
+  
+  bloque2 {
+      background-color: #FFA500;
+  }
+  
+  bloque3 {
+      background-color: #008000;
+  }
+  
+  bloque4 {
+      background-color: #0000FF;
+  }
+  
+  bloque5 {
+      background-color: #9400D3;
+  }
+   */
+
+
 
   /*   async onSubmit() {
     try {
@@ -48,13 +77,9 @@ export class FormularioComponent {
         confirmButtonText: "Aceptar",
       });
       this.router.navigate(['/empleados'])
-
-
     } catch (e: any) {
       this.errors = e.errors;
     }
-
-
   }
    */
 
