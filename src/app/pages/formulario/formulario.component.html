@@ -25,6 +25,9 @@
                 placeholder="Inserta aquí el titulo del post">
             <textarea class="resizable-input pb-5" type="text" formControlName='texto'
                 placeholder="Inserta aquí texto del post"></textarea>
+
+
+            <p-editor formControlName="texto" [style]="{ height: '320px' }"></p-editor>
         </div>
         <div class="pt-5">
             <input class="button" type="submit" value="Añadir post">

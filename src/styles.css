@@ -144,3 +144,13 @@ body {
     font-family: 'Lato', sans-serif;
     background-color: black;
 }
+
+
+/* QUILL */
+
+@import '../node_modules/primeng/resources/primeng.min.css';
+@import '../node_modules/primeicons/primeicons.css';
+@import '../node_modules/primeflex/primeflex.css';
+
+@import "../node_modules/quill/dist/quill.core.css";
+@import "../node_modules/quill/dist/quill.snow.css";

@@ -14,6 +14,7 @@ import { DetallePostComponent } from './pages/detalle-post/detalle-post.componen
 import { HomeComponent } from './pages/home/home.component';
 import { ErrorComponent } from './pages/error/error.component';
 
+import { EditorModule } from 'primeng/editor';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ErrorComponent } from './pages/error/error.component';
   imports: [
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EditorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
