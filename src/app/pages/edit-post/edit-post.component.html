@@ -3,29 +3,33 @@
     <form class="text-uppercase row justify-content-between align-items-start" [formGroup]='formularioEdit'
         (ngSubmit)="onSubmit()">
 
-        <div class="col-1 pb-3">
-            <label class="bloque2 pb-5">Autor:</label>
-            <label class="bloque3 pb-5">Categoría:</label>
-            <label class="bloque4 pb-5">Fecha:</label>
-            <label class="bloque5 pb-5">Imagen:</label>
-            <label class="bloque1 pb-5">Título:</label>
-            <label class="bloque1 pb-0">Texto:</label>
+        <label class="bloque2 pb-2">Autor:</label>
+        <input class="bloque2i ms-2 p-1" type="text" formControlName='autor'
+            placeholder="Inserta aquí el autor del post">
+
+        <label class="bloque3 pb-2">Categoría:</label>
+        <input class="bloque3i ms-2 p-1" type="text" formControlName='categoria'
+            placeholder="Inserta aquí la categoría del post">
+
+        <label class="bloque4 pb-2">Fecha:</label>
+        <input class="bloque4i ms-2 p-1" type="text" formControlName='fecha'
+            placeholder="Inserta aquí la fecha del post">
+
+        <label class="bloque5 pb-2">Imagen:</label>
+        <input class="bloque5i ms-2 p-1" type="text" formControlName='imagen'
+            placeholder="Inserta aquí la url de la imagen del post">
+
+        <label class="bloque1 pb-2">Título:</label>
+        <input class="bloque1i ms-2  p-1" type="text" formControlName='titulo'
+            placeholder="Inserta aquí el titulo del post">
+
+
+        <label class="bloque1 pb-2">Texto:</label>
+        <div class="bg-white ms-2 ">
+            <p-editor formControlName="texto" [style]="{ color:'black', height: '150px' }"
+                placeholder="Inserta aquí el texto del post"></p-editor>
         </div>
 
-        <div class="col-10">
-            <input class="bloque2i p-1" type="text" formControlName='autor'
-                placeholder="Inserta aquí el autor del post">
-            <input class="bloque3i p-1" type="text" formControlName='categoria'
-                placeholder="Inserta aquí la categoría del post">
-            <input class="bloque4i p-1" type="text" formControlName='fecha'
-                placeholder="Inserta aquí la fecha del post">
-            <input class="bloque5i resizable-input p-1" type="text" formControlName='imagen'
-                placeholder="Inserta aquí la url de la imagen del post">
-            <input class="bloque1i p-1" type="text" formControlName='titulo'
-                placeholder="Inserta aquí el titulo del post">
-            <textarea class="resizable-input pb-5" type="text" formControlName='texto'
-                placeholder="Inserta aquí texto del post"></textarea>
-        </div>
         <div class="pt-5">
             <input class="button" type="submit" value="Editar post">
         </div>
