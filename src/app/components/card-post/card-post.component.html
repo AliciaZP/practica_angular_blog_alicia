@@ -2,7 +2,7 @@
 
     <div class="col-5">
         <figure>
-            <img [src]="post.imagen" alt="imgen del post">
+            <img [src]="post.imagen" alt="imagen del post">
         </figure>
         <div class="d-flex gap-5 ps-2 pt-2">
             <div class="favorito pb-4"><i class="pe-2 d-inline fa-solid fa-star"></i><small>Favorito</small> </div>
@@ -13,8 +13,8 @@
 
     <div class="col-7">
         <div>
-            <h3 class="fs-1">{{post.titulo}}</h3>
-            <p class="pt-3">{{post.texto}} </p>
+            <h3 class="fs-1 pb-3">{{post.titulo}}</h3>
+            <p [innerHTML]="post.texto"></p>
             <div class="pt-4 d-flex justify-content-between">
                 <div>
                     <p class="pb-2">Autor: <span class="fst-italic fw-bold">{{post.autor}}</span></p>

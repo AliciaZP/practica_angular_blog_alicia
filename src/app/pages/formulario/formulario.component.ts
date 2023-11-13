@@ -11,10 +11,14 @@ import Swal from 'sweetalert2';
 })
 export class FormularioComponent {
 
+
+
   nuevoPost: FormGroup;
   postsService = inject(PostsService)
 
   router = inject(Router)
+
+  editorConfig: any;
 
   constructor() {
     this.nuevoPost = new FormGroup({
@@ -25,7 +29,26 @@ export class FormularioComponent {
       fecha: new FormControl(),
       categoria: new FormControl(),
     })
+
+    this.editorConfig = {
+      toolbar: [
+        ['bold', 'italic', 'underline', 'strike'],
+        ['blockquote', 'code-block'],
+        [{ 'header': 1 }, { 'header': 2 }],
+        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+        [{ 'script': 'sub' }, { 'script': 'super' }],
+        [{ 'indent': '-1' }, { 'indent': '+1' }],
+        [{ 'direction': 'rtl' }],
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+        [{ 'color': [] }, { 'background': [] }],
+        [{ 'font': [] }],
+        [{ 'align': [] }],
+        ['clean']
+      ]
+    };
   }
+
 
   onSubmit() {
     const response = this.postsService.create(this.nuevoPost.value)
@@ -42,28 +65,6 @@ export class FormularioComponent {
   }
 
 
-  /* 
-    bloque1 {
-      background-color: #FF0000;
-      /*     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 10%, rgba(255, 0, 0, 1) 100%); 
-  }
-  
-  bloque2 {
-      background-color: #FFA500;
-  }
-  
-  bloque3 {
-      background-color: #008000;
-  }
-  
-  bloque4 {
-      background-color: #0000FF;
-  }
-  
-  bloque5 {
-      background-color: #9400D3;
-  }
-   */
 
 
 
