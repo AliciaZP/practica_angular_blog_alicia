@@ -1,12 +1,14 @@
-.nav-position {
-    position: relative;
-    padding-top: 12rem;
-}
-
+/* navbar mobile */
 li {
     cursor: pointer;
     color: white;
     text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.registro {
+    margin-bottom: 5px;
+
 }
 
 .bloque1 {
@@ -28,3 +30,25 @@ li {
 .bloque5 {
     color: #9400D3;
 }
+
+
+
+
+/* mediaqueries 768px*/
+@media(min-width: 48rem) {
+    nav ul {
+        display: flex;
+    }
+
+    li {
+        padding-bottom: 0px;
+        padding-top: 5px;
+    }
+
+}
+
+/* mediaqueries 1000px*/
+@media(min-width: 62.5rem) {}
+
+/* mediaqueries 1400px*/
+@media(min-width: 87.5rem) {}
