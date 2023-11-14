@@ -5,6 +5,7 @@
 h2 {
     font-size: 7rem;
     color: var(--colorRed);
+    font-family: var(--fontSecondary)
 }
 
 section .found {

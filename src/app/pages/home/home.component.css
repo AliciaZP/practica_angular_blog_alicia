@@ -1,4 +1,8 @@
 /* HERO */
+div {
+    font-family: var(--fontSecondary)
+}
+
 #hero {
     position: relative;
     padding-top: 16rem;

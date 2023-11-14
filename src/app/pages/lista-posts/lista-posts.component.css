@@ -4,6 +4,7 @@ section {
 
 h2 {
     font-size: 3rem;
+    font-family: var(--fontSecondary)
 }
 
 select {
