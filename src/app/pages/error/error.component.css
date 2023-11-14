@@ -72,6 +72,18 @@ h3 {
     top: -8.5rem;
 }
 
+img {
+    width: 400px;
+    height: 400px;
+    padding: 2rem;
+    transition: 5s;
+
+    &:hover {
+        transform: rotate(360deg);
+    }
+}
+
+
 /* mediaqueries 768px*/
 @media(min-width: 48rem) {
     .buscar {
@@ -84,4 +96,8 @@ h3 {
 
 #error {
     margin-top: 8rem;
+}
+
+#flor {
+    padding-top: 0rem
 }
