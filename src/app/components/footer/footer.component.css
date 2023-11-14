@@ -2,11 +2,12 @@ li {
     &:hover {
         color: gray;
     }
+
+    padding-bottom:1em;
 }
 
 footer {
     padding-left: 5rem;
-    ;
 }
 
 a {
@@ -17,3 +18,16 @@ a {
         color: gray;
     }
 }
+
+/* mediaqueries 768px*/
+@media(min-width: 48rem) {
+    ul {
+        display: flex;
+    }
+}
+
+/* mediaqueries 1000px*/
+@media(min-width: 62.5rem) {}
+
+/* mediaqueries 1400px*/
+@media(min-width: 87.5rem) {}
