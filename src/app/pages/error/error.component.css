@@ -80,6 +80,10 @@ h3 {
     }
 }
 
+#error {
+    margin-top: 5rem;
+}
+
 /* mediaqueries 1000px*/
 @media(min-width: 62.5rem) {}
 

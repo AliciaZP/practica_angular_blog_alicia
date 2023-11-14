@@ -1,0 +1,16 @@
+.detalle {
+    margin-top: 10em;
+}
+
+/* mediaqueries 768px*/
+@media(min-width: 48rem) {
+    .detalle {
+        margin-top: 1em;
+    }
+}
+
+/* mediaqueries 1000px*/
+@media(min-width: 62.5rem) {}
+
+/* mediaqueries 1400px*/
+@media(min-width: 87.5rem) {}
