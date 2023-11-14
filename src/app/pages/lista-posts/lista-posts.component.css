@@ -1,3 +1,7 @@
+section {
+    padding-top: 10em
+}
+
 h2 {
     font-size: 3rem;
 }
@@ -31,3 +35,22 @@ select {
 .bloque5 {
     color: #9400D3;
 }
+
+/* mediaqueries 768px*/
+@media(min-width: 48rem) {
+    section {
+        padding-top: 2em
+    }
+
+    #filtros {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 2em;
+    }
+}
+
+/* mediaqueries 1000px*/
+@media(min-width: 62.5rem) {}
+
+/* mediaqueries 1400px*/
+@media(min-width: 87.5rem) {}
