@@ -1,3 +1,7 @@
+#error {
+    margin-top: 10rem;
+}
+
 h2 {
     font-size: 7rem;
     color: #FF0000;
@@ -7,10 +11,16 @@ section .found {
     font-size: 2rem;
 }
 
+#buscar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 1rem;
+}
 
 #bloque1 {
     background-color: #FF0000;
-
 }
 
 #bloque2 {
@@ -20,7 +30,6 @@ section .found {
 #bloque3 {
     background-color: #008000;
 }
-
 
 #bloque4 {
     background-color: #0000FF;
@@ -60,3 +69,19 @@ h3 {
     left: 12rem;
     top: -8.5rem;
 }
+
+/* mediaqueries 768px*/
+@media(min-width: 48rem) {
+    .buscar {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        gap: 5rem;
+    }
+}
+
+/* mediaqueries 1000px*/
+@media(min-width: 62.5rem) {}
+
+/* mediaqueries 1400px*/
+@media(min-width: 87.5rem) {}
