@@ -1,7 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* RESET*/
 
 html,
 body,
@@ -135,6 +132,38 @@ table {
 }
 
 
+/* QUILL */
+
+@import '../node_modules/primeng/resources/primeng.min.css';
+@import '../node_modules/primeicons/primeicons.css';
+@import '../node_modules/primeflex/primeflex.css';
+@import "../node_modules/quill/dist/quill.core.css";
+@import "../node_modules/quill/dist/quill.snow.css";
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* ROOT */
+:root {
+    --fontMain: 'Lato', sans-serif;
+    --fontSecondary: 'Lato', sans-serif;
+    --colorRed: #FF0000;
+    --colorGolden: #FFA500;
+    --colorGreen: #008000;
+    --colorBlue: #0048ff;
+    --colorPurple: #9400D3;
+
+
+    --gap: 1.25rem;
+    /* 20px */
+    --padding: 2.5rem;
+    /* 40px */
+    --fontSize1: 0.75rem;
+    /* 12px */
+    --fontSize2: 0.875rem;
+    /* 14px */
+}
+
 /* Layout */
 * {
     box-sizing: border-box;
@@ -145,12 +174,8 @@ body {
     background-color: black;
 }
 
-
-/* QUILL */
-
-@import '../node_modules/primeng/resources/primeng.min.css';
-@import '../node_modules/primeicons/primeicons.css';
-@import '../node_modules/primeflex/primeflex.css';
-
-@import "../node_modules/quill/dist/quill.core.css";
-@import "../node_modules/quill/dist/quill.snow.css";
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

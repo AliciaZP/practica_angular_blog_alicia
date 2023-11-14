@@ -1,16 +1,10 @@
 .detalle {
-    margin-top: 10em;
+    margin-top: 10rem;
 }
 
 /* mediaqueries 768px*/
 @media(min-width: 48rem) {
     .detalle {
-        margin-top: 1em;
+        margin-top: 1rem;
     }
 }
-
-/* mediaqueries 1000px*/
-@media(min-width: 62.5rem) {}
-
-/* mediaqueries 1400px*/
-@media(min-width: 87.5rem) {}

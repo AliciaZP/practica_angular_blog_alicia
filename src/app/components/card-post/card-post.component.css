@@ -4,7 +4,7 @@ img {
 
 i {
     display: block;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 
     &:hover {
         cursor: pointer
@@ -16,7 +16,7 @@ i {
     color: black;
 
     &:hover {
-        color: #FFA500;
+        color: var(--colorGolden);
     }
 }
 
@@ -24,30 +24,28 @@ i {
     color: black;
 
     &:hover {
-        color: #9400D3;
+        color: var(--colorPurple);
     }
 }
 
 .detalle i {
     &:hover {
-        color: #008000;
+        color: var(--colorGreen);
 
     }
 }
 
 .editar i {
     &:hover {
-        color: #0000FF;
+        color: var(--colorBlue);
     }
 }
 
 .borrar i {
     &:hover {
-        color: #FF0000;
+        color: var(--colorRed);
     }
 }
-
-
 
 /* mediaqueries 768px*/
 @media(min-width: 48rem) {
@@ -55,10 +53,3 @@ i {
         display: flex;
     }
 }
-
-
-/* mediaqueries 1000px*/
-@media(min-width: 62.5rem) {}
-
-/* mediaqueries 1400px*/
-@media(min-width: 87.5rem) {}

@@ -1,9 +1,10 @@
 li {
+    padding-bottom: 1rem;
+
     &:hover {
         color: gray;
     }
 
-    padding-bottom:1em;
 }
 
 footer {
@@ -25,9 +26,3 @@ a {
         display: flex;
     }
 }
-
-/* mediaqueries 1000px*/
-@media(min-width: 62.5rem) {}
-
-/* mediaqueries 1400px*/
-@media(min-width: 87.5rem) {}
