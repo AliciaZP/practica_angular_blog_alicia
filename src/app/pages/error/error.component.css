@@ -83,6 +83,22 @@ img {
     }
 }
 
+#flor {
+    margin-top: 1rem
+}
+
+#error {
+    margin-top: 8rem;
+}
+
+
+
+.errorp {
+    font-size: 4rem;
+    color: black;
+    position: absolute;
+    bottom: 24.5rem;
+}
 
 /* mediaqueries 768px*/
 @media(min-width: 48rem) {
@@ -92,12 +108,16 @@ img {
         align-items: start;
         gap: 5rem;
     }
-}
 
-#error {
-    margin-top: 8rem;
-}
+    #flor {
+        margin-top: 0rem;
+    }
 
-#flor {
-    padding-top: 0rem
+    .errorp {
+        font-size: 4rem;
+        color: black;
+        position: absolute;
+        bottom: 25.5rem;
+    }
+
 }
