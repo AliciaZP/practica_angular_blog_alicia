@@ -1,46 +1,10 @@
-/* #hero {
-    background-color: lightblue;
-    padding: 8rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.0)), url(https://accuratesigns.net/wp-content/uploads/2020/04/Color-Spectrum-scaled-2560x1280.jpg);
-    background-position: center;
-    background-size: cover;
-}
- */
-
+/* HERO */
 #hero {
     position: relative;
-    padding-top: 4rem;
-
+    padding-top: 16rem;
 }
 
-img {
-    width: 400px;
-    height: 400px;
-    padding: 2rem;
-    transition: 5s;
-
-    &:hover {
-        transform: rotate(360deg);
-    }
-}
-
-
-#secciones3 {
-    margin-bottom: 2rem;
-}
-
-h1 {
-    font-size: 6rem;
-    margin-right: 5rem;
-}
-
-span {
-    font-size: 8rem;
-    color: white;
-    display: inline-block;
-}
-
-
+/* HERO TEXTO COLOR */
 .text-gradient {
     &:hover {
         color: transparent;
@@ -62,115 +26,9 @@ span {
     }
 }
 
-
-article {
-    width: 15rem;
-    height: 12rem;
-    background-color: white;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    color: black;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.2);
-        background-color: white;
-        color: white;
-    }
-}
-
-
-.cuadro {
-    position: relative;
-}
-
-h3 {
-    margin-top: 7.5rem;
-}
-
-i {
-    display: inline-block;
-    position: absolute;
-    left: 12rem;
-    top: -8.5rem;
-}
-
-#bloque1 {
-    background-color: #FF0000;
-    /*     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 10%, rgba(255, 0, 0, 1) 100%); */
-}
-
-#bloque2 {
-    background-color: #FFA500;
-}
-
-#bloque3 {
-    background-color: #008000;
-}
-
-#bloque4 {
-    background-color: #0000FF;
-}
-
-#bloque5 {
-    background-color: #9400D3;
-}
-
-
-#bloque6 {
-    background-color: #FFCCCC;
-    /* Rojo pastel */
-}
-
-#bloque7 {
-    background-color: #FFD699;
-    /* Naranja pastel */
-}
-
-#bloque8 {
-    background-color: #B3FFB3;
-    /* Verde pastel */
-}
-
-#bloque9 {
-    background-color: #B3B3FF;
-    /* Azul pastel */
-}
-
-#bloque10 {
-    background-color: #E6CCFF;
-    /* Violeta pastel */
-}
-
-
-#bloque11 {
-    background-color: #0A0A0A;
-    /* Negro */
-}
-
-#bloque12 {
-    background-color: #333333;
-    /* Gris oscuro */
-}
-
-#bloque13 {
-    background-color: #666666;
-    /* Gris medio */
-}
-
-#bloque14 {
-    background-color: #999999;
-    /* Gris claro */
-}
-
-#bloque15 {
-    background-color: #E5E5E5;
-    /* Blanco */
-}
-
+/* HERO FONDO COLOR */
 .color-bar {
     /* height: 24rem; */
-    width: 100%;
     position: absolute;
     background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
     background-size: 1000% 1000%;
@@ -236,3 +94,150 @@ i {
         background-position: 0% 82%
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* SECCION COMUN */
+#secciones3 {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 6rem;
+    margin-right: 5rem;
+}
+
+span {
+    font-size: 8rem;
+    color: white;
+    display: inline-block;
+}
+
+article {
+    width: 15rem;
+    height: 12rem;
+    background-color: white;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    color: black;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: white;
+        color: white;
+    }
+}
+
+.cuadro {
+    position: relative;
+}
+
+h3 {
+    margin-top: 7.5rem;
+}
+
+i {
+    display: inline-block;
+    position: absolute;
+    left: 12rem;
+    top: -8.5rem;
+}
+
+/* SECCION 1 */
+#bloque1 {
+    background-color: #FF0000;
+}
+
+#bloque2 {
+    background-color: #FFA500;
+}
+
+#bloque3 {
+    background-color: #008000;
+}
+
+#bloque4 {
+    background-color: #0000FF;
+}
+
+#bloque5 {
+    background-color: #9400D3;
+}
+
+/* SECCION 2 */
+
+#bloque6 {
+    background-color: #FFCCCC;
+}
+
+#bloque7 {
+    background-color: #FFD699;
+}
+
+#bloque8 {
+    background-color: #B3FFB3;
+}
+
+#bloque9 {
+    background-color: #B3B3FF;
+}
+
+#bloque10 {
+    background-color: #E6CCFF;
+
+}
+
+/* SECCION 3*/
+
+#bloque11 {
+    background-color: #0A0A0A;
+}
+
+#bloque12 {
+    background-color: #333333;
+}
+
+#bloque13 {
+    background-color: #666666;
+}
+
+#bloque14 {
+    background-color: #999999;
+}
+
+#bloque15 {
+    background-color: #E5E5E5;
+}
+
+
+/* mediaqueries 768px*/
+@media(min-width: 48rem) {}
+
+/* mediaqueries 1000px*/
+@media(min-width: 62.5rem) {}
+
+/* mediaqueries 1400px*/
+@media(min-width: 87.5rem) {}
+
+
+
+/* FLOR GIRATORIA*/
+
+/* img {
+    width: 400px;
+    height: 400px;
+    padding: 2rem;
+    transition: 5s;
+
+    &:hover {
+        transform: rotate(360deg);
+    }
+} */
