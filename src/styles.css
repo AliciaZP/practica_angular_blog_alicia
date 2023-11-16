@@ -153,16 +153,6 @@ table {
     --colorGreen: #008000;
     --colorBlue: #0048ff;
     --colorPurple: #9400D3;
-
-
-    --gap: 1.25rem;
-    /* 20px */
-    --padding: 2.5rem;
-    /* 40px */
-    --fontSize1: 0.75rem;
-    /* 12px */
-    --fontSize2: 0.875rem;
-    /* 14px */
 }
 
 /* Layout */
