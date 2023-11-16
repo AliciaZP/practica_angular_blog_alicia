@@ -1,7 +1,18 @@
-<div class="detalle pt-5" *ngIf="postSeleccionado">
-    <card-post [post]="postSeleccionado" [botonActivo]="false"></card-post>
-</div>
+<section id="detalle" class="text-white p-5 mx-5">
+    <div class="volver">
+        <h2 class="pb-5">DETALLE POST</h2>
+        <div>
+            <i class="fa-solid fa-arrow-left mr-2"></i>
+            <h4 [routerLink]="['/posts']"> volver a la lista</h4>
+        </div>
+    </div>
 
-<div class="detalle" *ngIf="!postSeleccionado">
-    <p>La serie no existe</p>
-</div>
+    <div class="detalle pt-5" *ngIf="postSeleccionado">
+        <card-post [post]="postSeleccionado" [botonActivo]="false"></card-post>
+    </div>
+
+    <div class="detalle" *ngIf="!postSeleccionado">
+        <p>La serie no existe</p>
+    </div>
+
+</section>

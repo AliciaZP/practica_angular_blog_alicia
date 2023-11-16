@@ -1,11 +1,11 @@
 <article class="row align-items-start ps-2 pb-2 p-4 mt-5 bg-white text-black">
 
     <div class="col-5">
-        <figure>
+        <figure class="pr-3">
             <img [src]="post.imagen" alt="imagen del post">
         </figure>
         <div id="fav-comment" class="gap-5 ps-2 pt-2">
-            <div class="favorito pb-4" (click)="onClickFavorito(post)"><i
+            <div class="favorito" (click)="onClickFavorito(post)"><i
                     class="pe-2 d-inline fa-solid fa-star"></i><small>Favorito</small> </div>
         </div>
     </div>
@@ -23,15 +23,15 @@
                 <p>Publicado:<span class="fst-italic"> {{post.fecha | date:'dd/MM/yyyy'}}</span></p>
             </div>
         </div>
+    </div>
 
-        <div class="pt-3">
-            <div class="d-flex justify-content-end gap-4 pb-2">
-                <div class=" detalle" *ngIf="botonActivo" [routerLink]="['/posts', post.titulo]"><i
-                        class="fa-solid fa-magnifying-glass-plus"></i> </div>
-                <div class=" editar" *ngIf="botonActivo" [routerLink]="['/posts','edit', post.titulo]"><i
-                        class="fa-solid fa-pen-to-square"></i></div>
-                <div class="borrar" *ngIf="botonActivo" (click)="onClickDelete()"> <i class="fa-solid fa-trash-can"></i>
-                </div>
+    <div class="pb-3">
+        <div class="d-flex justify-content-end gap-4 pb-2">
+            <div class=" detalle" *ngIf="botonActivo" [routerLink]="['/posts', post.titulo]"><i
+                    class="fa-solid fa-magnifying-glass-plus"></i> </div>
+            <div class=" editar" *ngIf="botonActivo" [routerLink]="['/posts','edit', post.titulo]"><i
+                    class="fa-solid fa-pen-to-square"></i></div>
+            <div class="borrar" *ngIf="botonActivo" (click)="onClickDelete()"> <i class="fa-solid fa-trash-can"></i>
             </div>
         </div>
     </div>

@@ -1,10 +1,38 @@
-.detalle {
-    margin-top: 10rem;
+#detalle {
+    margin-top: 12rem;
 }
+
+h2 {
+    font-size: 3rem;
+    font-family: var(--fontSecondary)
+}
+
+.volver {
+    cursor: pointer;
+
+
+}
+
+h4 {
+    display: inline;
+
+    &:hover {
+        color: var(--colorGreen);
+    }
+}
+
 
 /* mediaqueries 768px*/
 @media(min-width: 48rem) {
-    .detalle {
-        margin-top: 1rem;
+
+    #detalle {
+        margin-top: 4rem;
+    }
+
+    .volver {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
     }
 }
