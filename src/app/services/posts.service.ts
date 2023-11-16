@@ -10,12 +10,18 @@ export class PostsService {
   //Los POSTS son una base de datos creada por mi, como los import no se pueden editar. Creo un array editable y trabajo sobre él a partir de la copia de POST
   private arrPosts: Post[] = [...POSTS];
 
-  create(pPost: Post) {
-    this.arrPosts.push(pPost)
+  getAll() {
+    return this.arrPosts;
   }
 
-  getAll() {
-    return this.arrPosts
+
+  create(pPost: Post) {
+    const postsDB = localStorage.getItem('array_postcreados');
+    if (postsDB) {
+      this.arrPosts = JSON.parse(postsDB);
+    }
+    this.arrPosts.push(pPost);
+    localStorage.setItem('array_postcreados', JSON.stringify(this.arrPosts));
   }
 
 
