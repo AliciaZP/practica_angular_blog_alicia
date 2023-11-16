@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Post } from 'src/app/interfaces/post.interface';
 import { FavoritosService } from 'src/app/services/favoritos.service';
 import { PostsService } from 'src/app/services/posts.service';
@@ -12,7 +13,9 @@ import { PostsService } from 'src/app/services/posts.service';
 export class ListaFavoritosComponent {
   postsServices = inject(PostsService)
   postsFavoritos = inject(FavoritosService)
+  activatedRoute = inject(ActivatedRoute)
 
+  postFavorito!: Post
   arrFavoritos: Post[] = []
   arrCategorias: string[] = []
   arrAutores: string[] = []
@@ -21,8 +24,12 @@ export class ListaFavoritosComponent {
     this.arrFavoritos = this.postsFavoritos.getFavs();
     this.arrCategorias = this.postsServices.getCategorias();
     this.arrAutores = this.postsServices.getAutores();
-  }
+    this.activatedRoute.params.subscribe((params) => {
 
+      const response = this.postsFavoritos.getByTitulo(params['postTITLE']);
+      this.postFavorito = response
+    });
+  }
 
   onPostBorrado($event: string) {
     const response = this.postsServices.deleteByTitulo($event)

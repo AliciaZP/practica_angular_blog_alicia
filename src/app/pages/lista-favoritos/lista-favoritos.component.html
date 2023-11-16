@@ -39,8 +39,8 @@
         </div>
 
     </div>
-    <div class="ps-3">
-        <card-post (borrarPostOutput)="onPostBorrado($event)" *ngFor="let post of arrFavoritos"
-            [post]="post"></card-post>
+    <div class="ps-3" *ngIf="postFavorito">
+        <card-post [post]=" postFavorito" [botonActivo]="false" (borrarPostOutput)="onPostBorrado($event)"
+            *ngFor="let post of arrFavoritos" [post]="post"></card-post>
     </div>
 </section>

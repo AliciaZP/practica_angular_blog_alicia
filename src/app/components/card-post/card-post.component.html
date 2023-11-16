@@ -28,9 +28,9 @@
             <div class="d-flex justify-content-end gap-4 pb-2">
                 <div class=" detalle" *ngIf="botonActivo" [routerLink]="['/posts', post.titulo]"><i
                         class="fa-solid fa-magnifying-glass-plus"></i> </div>
-                <div class=" editar" [routerLink]="['/posts','edit', post.titulo]"><i
+                <div class=" editar" *ngIf="botonActivo" [routerLink]="['/posts','edit', post.titulo]"><i
                         class="fa-solid fa-pen-to-square"></i></div>
-                <div class="borrar" (click)="onClickDelete()"> <i class="fa-solid fa-trash-can"></i>
+                <div class="borrar" *ngIf="botonActivo" (click)="onClickDelete()"> <i class="fa-solid fa-trash-can"></i>
                 </div>
             </div>
         </div>
