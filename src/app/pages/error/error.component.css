@@ -86,12 +86,6 @@ img {
     margin-top: 10rem;
 }
 
-.errorp {
-    font-size: 4rem;
-    color: black;
-    position: absolute;
-    bottom: 22.5rem;
-}
 
 /* mediaqueries 768px*/
 @media(min-width: 48rem) {
@@ -116,6 +110,5 @@ img {
     #error {
         margin-top: 4rem;
     }
-
 
 }

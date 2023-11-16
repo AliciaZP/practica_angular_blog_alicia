@@ -85,7 +85,3 @@ export class FormularioComponent {
    */
 
 }
-/* - Este componente representa un formulario con los diferentes campos del modelo Post.
-- Cuando pulsemos el botón enviar, el formulario debe mandar al servicio la información del nuevo Post para que se almacene junto a los 
-demás.
- */

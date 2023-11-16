@@ -15,6 +15,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ErrorComponent } from './pages/error/error.component';
 
 import { EditorModule } from 'primeng/editor';
+import { ListaFavoritosComponent } from './pages/lista-favoritos/lista-favoritos.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { EditorModule } from 'primeng/editor';
     EditPostComponent,
     DetallePostComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
+    ListaFavoritosComponent
   ],
   imports: [
     ReactiveFormsModule,

@@ -1,5 +1,5 @@
 <section class="px-5 mt-5 text-white">
-    <h2 class="pt-5 pb-5">LISTADO DE POST</h2>
+    <h2 class="pt-5 pb-5">POST FAVORITOS</h2>
 
     <div id="filtros">
         <div class="pb-2">
@@ -39,8 +39,8 @@
         </div>
 
     </div>
-
     <div class="ps-3">
-        <card-post (borrarPostOutput)="onPostBorrado($event)" *ngFor="let post of arrPosts" [post]="post"></card-post>
+        <card-post (borrarPostOutput)="onPostBorrado($event)" *ngFor="let post of arrFavoritos"
+            [post]="post"></card-post>
     </div>
 </section>

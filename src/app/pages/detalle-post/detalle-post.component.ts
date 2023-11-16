@@ -17,7 +17,7 @@ export class DetallePostComponent {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params) => {
-      //Object { serieId: "3" }, si lo pongo en http://localhost:4200/serie/3
+
       const response = this.postService.getByTitulo(params['postTITLE']);
       this.postSeleccionado = response
     })

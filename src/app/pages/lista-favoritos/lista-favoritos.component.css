@@ -1,0 +1,51 @@
+section {
+    padding-top: 10rem
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: var(--fontSecondary)
+}
+
+select {
+    border: none;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    background-color: black;
+    color: var(--colorRed);
+    padding: 0.5rem;
+}
+
+
+.bloque1 {
+    color: var(--colorRed);
+}
+
+.bloque2 {
+    color: var(--colorGolden);
+}
+
+.bloque3 {
+    color: var(--colorGreen);
+}
+
+.bloque4 {
+    color: var(--colorBlue);
+}
+
+.bloque5 {
+    color: var(--colorPurple);
+}
+
+/* mediaqueries 768px*/
+@media(min-width: 48rem) {
+    section {
+        padding-top: 2rem
+    }
+
+    #filtros {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 2em;
+    }
+}

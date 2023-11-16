@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Post } from 'src/app/interfaces/post.interface';
+import { FavoritosService } from 'src/app/services/favoritos.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -16,6 +17,9 @@ export class CardPostComponent {
   @Input() botonActivo: boolean = true;
 
   @Output() borrarPostOutput: EventEmitter<string> = new EventEmitter();
+  @Output() favoritoPostOutput: EventEmitter<string> = new EventEmitter();
+
+  favoritosService = inject(FavoritosService)
 
   constructor() {
     this.post = {
@@ -28,6 +32,11 @@ export class CardPostComponent {
     }
   }
 
+  onClickFavorito(post: any) {
+    this.favoritosService.agregarFavorito(post);
+    this.favoritoPostOutput.emit(this.post.titulo);
+    this.router.navigate(['/favoritos'])
+  }
 
 
   async onClickDelete() {
