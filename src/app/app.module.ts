@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaPostsComponent } from './pages/lista-posts/lista-posts.component';
@@ -40,6 +40,7 @@ import { FormLoginComponent } from './pages/form-login/form-login.component';
     BrowserModule,
     AppRoutingModule,
     EditorModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
