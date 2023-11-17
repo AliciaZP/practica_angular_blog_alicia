@@ -9,6 +9,9 @@ li {
 
 footer {
     padding-left: 5rem;
+    height: 10vh;
+
+
 }
 
 a {
@@ -17,6 +20,25 @@ a {
 
     &:hover {
         color: gray;
+    }
+}
+
+
+.facebook {
+    &:hover {
+        color: var(--colorBlue)
+    }
+}
+
+.insta {
+    &:hover {
+        color: var(--colorRed)
+    }
+}
+
+.twitter-x {
+    &:hover {
+        color: var(--colorGreen)
     }
 }
 
