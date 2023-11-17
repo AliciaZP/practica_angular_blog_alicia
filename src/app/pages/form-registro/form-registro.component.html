@@ -1,1 +1,34 @@
-<p>form-registro works!</p>
+<section id="formulario" class="text-white p-5 mx-5">
+    <h2 class="pb-5">NUEVO USUARIO</h2>
+    <form class="text-uppercase row justify-content-between align-items-start">
+
+
+        <label class="bloque1 pb-2">Nombre:</label>
+        <input class="bloque1i ms-2 p-1" type="text" formControlName='nombre' placeholder="Inserta aquí tu nombre">
+
+        <label class="bloque1 pb-2">Apellidos:</label>
+        <input class="bloque1i ms-2 p-1" type="text" formControlName='apellidos'
+            placeholder="Inserta aquí tus apellidos">
+
+        <label class="bloque4 pb-2">Fecha nacimiento:</label>
+        <input class="bloque4i ms-2 p-1" type="date" formControlName='fecha nacimiento'
+            placeholder="Inserta aquí tu fecha de nacimiento">
+
+        <label class="bloque3 pb-2">Nombre de Usuario:</label>
+        <input class="bloque3i ms-2 p-1" type="text" formControlName='nickname'
+            placeholder="Inserta aquí tu nombre de usuario">
+
+        <label class="bloque5 pb-2">Email:</label>
+        <input class="bloque5i ms-2  p-1" type="email" formControlName='email' placeholder="Inserta aquí tu email">
+
+        <label class="bloque2 pb-2">Contraseña:</label>
+        <input class="bloque2i ms-2  p-1" type="text" formControlName='password'
+            placeholder="Inserta aquí tu contraseña">
+
+
+        <div class="pt-5">
+            <input class="button" type="submit" value="Añadir post">
+        </div>
+    </form>
+
+</section>

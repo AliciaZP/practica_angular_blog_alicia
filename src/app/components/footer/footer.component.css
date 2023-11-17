@@ -19,10 +19,21 @@ a {
     color: #212529;
 
     &:hover {
-        color: gray;
+        color: var(--colorGolden)
     }
 }
 
+.email {
+    &:hover {
+        color: var(--colorGolden)
+    }
+}
+
+.copyright {
+    &:hover {
+        color: var(--colorPurple)
+    }
+}
 
 .facebook {
     &:hover {
