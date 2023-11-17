@@ -16,6 +16,8 @@ import { ErrorComponent } from './pages/error/error.component';
 
 import { EditorModule } from 'primeng/editor';
 import { ListaFavoritosComponent } from './pages/lista-favoritos/lista-favoritos.component';
+import { FormRegistroComponent } from './pages/form-registro/form-registro.component';
+import { FormLoginComponent } from './pages/form-login/form-login.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ListaFavoritosComponent } from './pages/lista-favoritos/lista-favoritos
     DetallePostComponent,
     HomeComponent,
     ErrorComponent,
-    ListaFavoritosComponent
+    ListaFavoritosComponent,
+    FormRegistroComponent,
+    FormLoginComponent
   ],
   imports: [
     ReactiveFormsModule,
