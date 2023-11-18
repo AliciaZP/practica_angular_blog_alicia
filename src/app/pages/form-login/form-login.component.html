@@ -1,9 +1,9 @@
-<section id="formulario" class="text-white p-5 mx-5">
+<section id="formulario" class="text-white p-5 mx-5" [formGroup]='nuevoLogin' (ngSubmit)="onSubmit()">
     <h2 class="pb-5">INICIAR SESIÓN</h2>
     <form class="text-uppercase row justify-content-between align-items-start">
 
         <label class="bloque5 pb-2">Nombre de usuario:</label>
-        <input class="bloque5i ms-2 p-1" type="text" formControlName='nickname'
+        <input class="bloque5i ms-2 p-1" type="email" formControlName='email'
             placeholder="Inserta aquí tu nombre de usuario">
 
         <label class="bloque2 pb-2">Contraseña</label>

@@ -1,8 +1,8 @@
 export interface Usuario {
-    titulo: string,
-    texto: string,
-    autor: string,
-    imagen: string,
-    fecha: Date | string,
-    categoria: string,
+    nombre: string,
+    apellidos: string,
+    fecha_nacimiento: string,
+    username: string,
+    email: string,
+    password: string,
 }

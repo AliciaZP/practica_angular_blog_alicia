@@ -1,6 +1,4 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
-import { firstValueFrom } from 'rxjs';
+import { Injectable } from '@angular/core';
 import { Usuario } from '../interfaces/usuario.interface';
 
 @Injectable({
@@ -8,25 +6,43 @@ import { Usuario } from '../interfaces/usuario.interface';
 })
 export class UsuariosService {
 
-  /*   private httpClient = inject(HttpClient)
-    private baseURL: string = 'https://crmempleados.ngrok.io/api/usuarios/'
-  
-    registrarUsuario(body: Usuario) {
-      return firstValueFrom(
-        this.httpClient.post<RegisterResponse>(`${this.baseURL}/registro`, body))
+  private arrUsuarios: Usuario[] = [];
+  private usuarioIdentificado: Usuario | null = null;
+
+  //Para poder registrarse tiene que verificar si el correo o el username ya están registrados en la base de datos (en este caso local host)
+  registrarUsuario(datosRegistro: Usuario): boolean {
+    const usuarioExiste = this.arrUsuarios.find(
+      usuario => usuario.username === datosRegistro.username || usuario.email === datosRegistro.email
+    );
+
+    if (usuarioExiste) {
+      console.error('Ya existe un usuario con este nombre de usuario o correo electrónico. No se puede registrar.');
+      return false;
     }
-  
-    loginUsuario(body: Usuario) {
-      return firstValueFrom(
-        this.httpClient.post<LoginResponse>(`${this.baseURL}/login`, body))
+
+    this.arrUsuarios.push(datosRegistro);
+    localStorage.setItem('usuarios', JSON.stringify(this.arrUsuarios));
+
+    return true;
+  }
+
+
+
+  loginUsuario(datosLogin: Usuario): boolean {
+    const usuarioEncontrado = this.arrUsuarios.find(
+      usuario => usuario.email === datosLogin.email && usuario.password === datosLogin.password
+    );
+
+    if (usuarioEncontrado) {
+      this.usuarioIdentificado = usuarioEncontrado
+      return true;
+    } else {
+      return false;
     }
-  
-    isLogged(): boolean {
-      if (localStorage.getItem('auth_token')) return true;
-      else return false;
-  
-      //return localStorage.getItem('auth_token') ? true : false; Es la forma de hacer ternario
-  
-    } */
+  }
+
+  isLogged(): boolean {
+    return this.usuarioIdentificado !== null;
+  }
 }
 

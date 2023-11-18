@@ -11,31 +11,48 @@ import Swal from 'sweetalert2';
 })
 export class FormRegistroComponent {
 
-  /*   nuevoRegistro: FormGroup;
-    router = inject(Router)
-    usuariosService = inject(UsuariosService)
-   */
-  /*   constructor() {
-      this.nuevoRegistro = new FormGroup({
-        email: new FormControl(),
-        username: new FormControl(),
-        password: new FormControl(),
-      })
+  nuevoRegistro: FormGroup;
+  router = inject(Router)
+  usuariosService = inject(UsuariosService)
+
+  constructor() {
+    this.nuevoRegistro = new FormGroup({
+      nombre: new FormControl(),
+      apellidos: new FormControl(),
+      fecha_nacimiento: new FormControl(),
+      username: new FormControl(),
+      email: new FormControl(),
+      password: new FormControl(),
+    })
+  }
+
+  onSubmit() {
+    const registroCorrecto = this.usuariosService.registrarUsuario(this.nuevoRegistro.value);
+
+    if (registroCorrecto) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Usuario registrado',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#008000',
+        color: 'white',
+        background: 'black',
+      });
+      this.router.navigate(['/login']);
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error en el registro',
+        text: 'El nombre de usuario / correo electrónico ya están registrados. Vuelva a intentarlo.',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#FF0000',
+        color: 'white',
+        background: 'black',
+      });
     }
-  
-    async onSubmit() {
-      const response = await this.usuariosService.registrarUsuario(this.nuevoRegistro.value)
-      if (response.success) {
-        await Swal.fire({
-          icon: "success",
-          title: "Empleado registrado",
-          confirmButtonText: "Aceptar",
-          confirmButtonColor: "#3085d6",
-        });
-        this.router.navigate(['/login'])
-  
-      }
-  
-    } */
+  }
 }
+
+
+
 

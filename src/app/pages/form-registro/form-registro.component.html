@@ -1,4 +1,4 @@
-<section id="formulario" class="text-white p-5 mx-5">
+<section id="formulario" class="text-white p-5 mx-5" [formGroup]='nuevoRegistro' (ngSubmit)="onSubmit()">
     <h2 class="pb-5">NUEVO USUARIO</h2>
     <form class="text-uppercase row justify-content-between align-items-start">
 
@@ -11,11 +11,11 @@
             placeholder="Inserta aquí tus apellidos">
 
         <label class="bloque4 pb-2">Fecha nacimiento:</label>
-        <input class="bloque4i ms-2 p-1" type="date" formControlName='fecha nacimiento'
+        <input class="bloque4i ms-2 p-1" type="date" formControlName='fecha_nacimiento'
             placeholder="Inserta aquí tu fecha de nacimiento">
 
         <label class="bloque3 pb-2">Nombre de Usuario:</label>
-        <input class="bloque3i ms-2 p-1" type="text" formControlName='nickname'
+        <input class="bloque3i ms-2 p-1" type="text" formControlName='username'
             placeholder="Inserta aquí tu nombre de usuario">
 
         <label class="bloque5 pb-2">Email:</label>
@@ -27,7 +27,7 @@
 
 
         <div class="pt-5">
-            <input class="button" type="submit" value="Añadir post">
+            <input class="button" type="submit" value="Registrarse">
         </div>
     </form>
 
