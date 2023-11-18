@@ -24,6 +24,8 @@ a {
 }
 
 .email {
+
+
     &:hover {
         color: var(--colorGolden)
     }
@@ -36,18 +38,24 @@ a {
 }
 
 .facebook {
+    cursor: pointer;
+
     &:hover {
         color: var(--colorBlue)
     }
 }
 
 .insta {
+    cursor: pointer;
+
     &:hover {
         color: var(--colorRed)
     }
 }
 
 .twitter-x {
+    cursor: pointer;
+
     &:hover {
         color: var(--colorGreen)
     }
