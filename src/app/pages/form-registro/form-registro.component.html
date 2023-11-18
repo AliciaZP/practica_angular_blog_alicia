@@ -1,34 +1,53 @@
-<section id="formulario" class="text-white p-5 mx-5" [formGroup]='nuevoRegistro' (ngSubmit)="onSubmit()">
+<section id="formulario" class="text-white p-5 mx-5">
     <h2 class="pb-5">NUEVO USUARIO</h2>
-    <form class="text-uppercase row justify-content-between align-items-start">
+    <form class="text-uppercase row justify-content-between align-items-start" [formGroup]="nuevoRegistro"
+        (ngSubmit)="onSubmit()">
 
 
         <label class="bloque1 pb-2">Nombre:</label>
-        <input class="bloque1i ms-2 p-1" type="text" formControlName='nombre' placeholder="Inserta aquí tu nombre">
+        <input class="bloque1i ms-2 px-1 pt-1" type="text" formControlName='nombre'
+            placeholder="Inserta aquí tu nombre">
+        <p class="error" *ngIf="checkError('nombre','required')">El nombre es obligatorio.</p>
+        <p class="error" *ngIf="checkError('nombre','minlength')">La longitud mínima son 3 caracteres.</p>
+        <p class="error" *ngIf="checkError('nombre','maxlength')">La longitud máxima son 30 caracteres.</p>
 
-        <label class="bloque1 pb-2">Apellidos:</label>
+        <label class="bloque1 pb-2 pt-4">Apellidos:</label>
         <input class="bloque1i ms-2 p-1" type="text" formControlName='apellidos'
             placeholder="Inserta aquí tus apellidos">
+        <p class="error" *ngIf="checkError('apellidos','required')">Los apellidos son obligatorios.</p>
+        <p class="error" *ngIf="checkError('apellidos','minlength')">La longitud mínima son 2 caracteres.</p>
+        <p class="error" *ngIf="checkError('apellidos','maxlength')">La longitud máxima son 70 caracteres.</p>
 
-        <label class="bloque4 pb-2">Fecha nacimiento:</label>
+        <label class="bloque4 pb-2 pt-4">Fecha nacimiento:</label>
         <input class="bloque4i ms-2 p-1" type="date" formControlName='fecha_nacimiento'
             placeholder="Inserta aquí tu fecha de nacimiento">
+        <p class="error" *ngIf="checkError('fecha_nacimiento','required')">La fecha de nacimiento es obligatoria.</p>
 
-        <label class="bloque3 pb-2">Nombre de Usuario:</label>
+        <label class="bloque3 pb-2 pt-4">Nombre de Usuario:</label>
         <input class="bloque3i ms-2 p-1" type="text" formControlName='username'
             placeholder="Inserta aquí tu nombre de usuario">
+        <p class="error" *ngIf="checkError('username','required')">El nombre de usuario es obligatorio.</p>
+        <p class="error" *ngIf="checkError('username','usernamevalidator')">El formato nombre de usuario no es
+            válido. Debe contener solo letras, números o guiones bajos y su longitud no puede ser inferior a 3
+            caracteres ni superar 20 caracteres.</p>
 
-        <label class="bloque5 pb-2">Email:</label>
+        <label class="bloque5 pb-2 pt-4">Email:</label>
         <input class="bloque5i ms-2  p-1" type="email" formControlName='email' placeholder="Inserta aquí tu email">
+        <p class="error" *ngIf="checkError('email','required')">El email es obligatorio.</p>
+        <p class="error" *ngIf="checkError('email','pattern')">El formato del email no es válido.</p>
 
-        <label class="bloque2 pb-2">Contraseña:</label>
+        <label class="bloque2 pb-2 pt-4">Contraseña:</label>
         <input class="bloque2i ms-2  p-1" type="text" formControlName='password'
             placeholder="Inserta aquí tu contraseña">
-
+        <p class="error" *ngIf="checkError('password','required')">La contraseña es obligatoria.</p>
+        <p class="error" *ngIf="checkError('password','passwordvalidator')">El formato de la constraseña no es
+            válido. Debe tener al menos un carácter en mayúscula, un carácter numérico, un carácter especial y su
+            longitud no puede superar 20 caracteres</p>
 
         <div class="pt-5">
             <input class="button" type="submit" value="Registrarse">
         </div>
+
     </form>
 
 </section>

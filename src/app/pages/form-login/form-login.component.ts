@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 import Swal from 'sweetalert2';
@@ -17,8 +17,8 @@ export class FormLoginComponent {
 
   constructor() {
     this.nuevoLogin = new FormGroup({
-      email: new FormControl(),
-      password: new FormControl(),
+      email: new FormControl(null, Validators.required),
+      password: new FormControl(null, Validators.required),
     })
   }
 

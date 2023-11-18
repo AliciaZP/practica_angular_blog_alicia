@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,8 +16,9 @@ import { ErrorComponent } from './pages/error/error.component';
 
 import { EditorModule } from 'primeng/editor';
 import { ListaFavoritosComponent } from './pages/lista-favoritos/lista-favoritos.component';
-import { FormRegistroComponent } from './pages/form-registro/form-registro.component';
+import { FormRegistroComponent } from './pages/form-registro/FormRegistroComponent';
 import { FormLoginComponent } from './pages/form-login/form-login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,11 +37,11 @@ import { FormLoginComponent } from './pages/form-login/form-login.component';
     FormLoginComponent
   ],
   imports: [
-    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     EditorModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
