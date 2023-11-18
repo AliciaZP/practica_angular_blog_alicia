@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { EditorModule } from 'primeng/editor';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+
 import { ListaPostsComponent } from './pages/lista-posts/lista-posts.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { CardPostComponent } from './components/card-post/card-post.component';
@@ -13,12 +18,9 @@ import { EditPostComponent } from './pages/edit-post/edit-post.component';
 import { DetallePostComponent } from './pages/detalle-post/detalle-post.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ErrorComponent } from './pages/error/error.component';
-
-import { EditorModule } from 'primeng/editor';
 import { ListaFavoritosComponent } from './pages/lista-favoritos/lista-favoritos.component';
-import { FormRegistroComponent } from './pages/form-registro/FormRegistroComponent';
 import { FormLoginComponent } from './pages/form-login/form-login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormRegistroComponent } from './pages/form-registro/form-registro.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     ErrorComponent,
     ListaFavoritosComponent,
-    FormRegistroComponent,
-    FormLoginComponent
+    FormLoginComponent,
+    FormRegistroComponent
   ],
   imports: [
     BrowserModule,
