@@ -37,6 +37,7 @@ export class UsuariosService {
       this.usuarioIdentificado = usuarioEncontrado
       return true;
     } else {
+      console.error('El nombre de usuario y la contraseña no coinciden');
       return false;
     }
   }

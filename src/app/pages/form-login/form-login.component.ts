@@ -23,19 +23,32 @@ export class FormLoginComponent {
   }
 
   onSubmit() {
-    const response = this.usuariosService.loginUsuario(this.nuevoLogin.value)
-    console.log(response);
-    Swal.fire({
-      icon: "success",
-      title: "Login correcto",
-      confirmButtonText: "Aceptar",
-      confirmButtonColor: "#008000",
-      color: "white",
-      background: "black",
-    });
-    this.router.navigate(['/home'])
+    const loginCorrecto = this.usuariosService.loginUsuario(this.nuevoLogin.value);
+
+    if (loginCorrecto) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Login correcto',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#008000',
+        color: 'white',
+        background: 'black',
+      });
+      this.router.navigate(['/home']);
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error en el login',
+        text: 'El email o la contraseña no son válidos.',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#FF0000',
+        color: 'white',
+        background: 'black',
+      });
+    }
   }
 }
+
 
 
 
