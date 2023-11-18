@@ -47,6 +47,15 @@ export class FormLoginComponent {
       });
     }
   }
+
+
+  checkError(controlName: string, errorName: string) {
+    return this.nuevoLogin.get(controlName)?.hasError(errorName) && this.nuevoLogin.get(controlName)?.touched;
+  }
+
+
+
+
 }
 
 

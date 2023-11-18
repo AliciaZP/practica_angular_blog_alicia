@@ -4,10 +4,12 @@
 
         <label class="bloque5 pb-2">Email:</label>
         <input class="bloque5i ms-2 p-1" type="email" formControlName='email' placeholder="Inserta aquí tu email">
+        <p class="error" *ngIf="checkError('email','required')">El email es obligatorio.</p>
 
-        <label class="bloque2 pb-2">Contraseña</label>
-        <input class="bloque2i ms-2 p-1" type="email" formControlName='password'
+        <label class="bloque2 pb-2 pt-4">Contraseña</label>
+        <input class="bloque2i ms-2 p-1" type="text" formControlName='password'
             placeholder="Inserta aquí tu contraseña">
+        <p class="error" *ngIf="checkError('password','required')">La contraseña es obligatorio.</p>
 
         <div class="pt-5">
             <input class="button" type="submit" value="Iniciar Sesión">

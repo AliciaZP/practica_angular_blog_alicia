@@ -11,7 +11,7 @@ h2 {
 input {
     display: inline;
     width: 100%;
-    margin-bottom: 2.1rem;
+    margin-bottom: 0.5rem;
 }
 
 label {
@@ -102,6 +102,20 @@ textarea::placeholder {
     }
 }
 
+.error {
+    color: gray;
+    text-transform: none;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+input.ng-valid.ng-touched {
+    border: 2px solid green;
+}
 
 /* mediaqueries 768px*/
 @media(min-width: 48rem) {
