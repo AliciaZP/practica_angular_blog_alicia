@@ -43,7 +43,7 @@ export class ListaPostsComponent {
 
 
   onPostBorrado($event: string) {
-    const response = this.postsServices.deleteByTitulo($event)
+    const response = this.postsServices.deleteById($event)
     this.arrPosts = this.postsServices.getAll();
   }
 

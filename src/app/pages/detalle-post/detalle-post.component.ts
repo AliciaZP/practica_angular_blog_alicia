@@ -18,7 +18,7 @@ export class DetallePostComponent {
   ngOnInit() {
     this.activatedRoute.params.subscribe((params) => {
 
-      const response = this.postService.getByTitulo(params['postTITLE']);
+      const response = this.postService.getById(params['postID']);
       this.postSeleccionado = response
     })
   }

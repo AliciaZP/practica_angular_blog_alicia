@@ -45,13 +45,6 @@ export class PostsService {
     return this.arrPosts.filter(post => post.autor === pAutor)
   }
 
-
-  getByTitulo(pTitulo: string): Post {
-    const postsEncontrados = this.arrPosts.filter(post => post.titulo === pTitulo);
-    // Devolver el primer post encontrado o un objeto Post vacío si no hay coincidencias
-    return postsEncontrados.length > 0 ? postsEncontrados[0] : { titulo: '', texto: '', autor: '', imagen: '', fecha: new Date(), categoria: '' };
-  }
-
   orderByTitulo(ascendente: boolean): Post[] {
     // Ordenar y devolver una nueva lista sin modificar la original
     return this.arrPosts.slice().sort((a, b) => {
@@ -71,19 +64,22 @@ export class PostsService {
     });
   }
 
-  deleteByTitulo(postTITLE: string) {
-    this.arrPosts = this.arrPosts.filter(post => post.titulo !== postTITLE);
+
+  getById(postID: string): Post {
+    const postEncontrado = this.arrPosts.find(post => post.id === postID);
+    return postEncontrado ? { ...postEncontrado } : { id: '', titulo: '', texto: '', autor: '', imagen: '', fecha: new Date(), categoria: '' };
   }
 
-  //es tipo void porque no necesita retornar nada
-  updateByTitulo(postTITLE: string, formularioEdit: Post): void {
-    //busco el índice del titulo que tiene mi post
-    const postIndex = this.arrPosts.findIndex(post => post.titulo === postTITLE);
+  deleteById(postID: string): void {
+    this.arrPosts = this.arrPosts.filter(post => post.id !== postID);
+  }
 
-    //verifico si el post con ese titulo existe, si no se encuentra === -1
+  updateById(postID: string, formularioEdit: Post): void {
+    const postIndex = this.arrPosts.findIndex(post => post.id === postID);
+
     if (postIndex !== -1) {
-      //los ... son el spread operator que permite mezclar los datos nuevos(formularioEdit) con los existentes. Con esto solo se actualizan los que se han modificado
       this.arrPosts[postIndex] = { ...this.arrPosts[postIndex], ...formularioEdit };
     }
   }
+
 }

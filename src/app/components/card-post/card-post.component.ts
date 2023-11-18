@@ -23,6 +23,7 @@ export class CardPostComponent {
 
   constructor() {
     this.post = {
+      id: "",
       titulo: "",
       texto: "",
       autor: "",
@@ -34,7 +35,7 @@ export class CardPostComponent {
 
   onClickFavorito(post: any) {
     this.favoritosService.agregarFavorito(post);
-    this.favoritoPostOutput.emit(this.post.titulo);
+    this.favoritoPostOutput.emit(this.post.id);
     this.router.navigate(['/favoritos'])
   }
 
@@ -53,7 +54,7 @@ export class CardPostComponent {
       background: "black",
     })
     if (result.isConfirmed) {
-      this.borrarPostOutput.emit(this.post.titulo);
+      this.borrarPostOutput.emit(this.post.id);
       this.router.navigate(['/posts'])
     }
   }

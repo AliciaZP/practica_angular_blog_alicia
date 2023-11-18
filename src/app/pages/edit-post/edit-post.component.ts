@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 export class EditPostComponent {
 
   postEdit: FormGroup
-  postTITLE: string = '';
+  postID: string = '';
 
   router = inject(Router)
   activatedRoute = inject(ActivatedRoute)
@@ -34,8 +34,8 @@ export class EditPostComponent {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
-      this.postTITLE = params['postTITLE']
-      const response = this.postsService.getByTitulo(this.postTITLE)
+      this.postID = params['postID']
+      const response = this.postsService.getById(this.postID)
       //hay que pasarle un objeto con los mismo campos que definimos en el form group
       const { titulo, texto, autor, imagen, fecha, categoria } = response
       this.postEdit.setValue({ titulo, texto, autor, imagen, fecha, categoria })
@@ -44,7 +44,7 @@ export class EditPostComponent {
 
   onSubmit() {
     if (this.postEdit.valid) {
-      this.postsService.updateByTitulo(this.postTITLE, this.postEdit.value);
+      this.postsService.updateById(this.postID, this.postEdit.value);
       Swal.fire({
         icon: 'success',
         title: 'Post editado correctamente',

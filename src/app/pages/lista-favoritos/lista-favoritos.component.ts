@@ -32,7 +32,7 @@ export class ListaFavoritosComponent {
   }
 
   onPostBorrado($event: string) {
-    const response = this.postsServices.deleteByTitulo($event)
+    const response = this.postsServices.deleteById($event)
     this.arrFavoritos = this.postsServices.getAll();
   }
 
