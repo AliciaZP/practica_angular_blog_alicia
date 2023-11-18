@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PostsService } from 'src/app/services/posts.service';
 import Swal from 'sweetalert2';
@@ -11,8 +11,6 @@ import Swal from 'sweetalert2';
 })
 export class FormularioComponent {
 
-
-
   nuevoPost: FormGroup;
   postsService = inject(PostsService)
 
@@ -22,12 +20,15 @@ export class FormularioComponent {
 
   constructor() {
     this.nuevoPost = new FormGroup({
-      titulo: new FormControl(),
-      texto: new FormControl(),
-      autor: new FormControl(),
-      imagen: new FormControl(),
-      fecha: new FormControl(),
-      categoria: new FormControl(),
+      titulo: new FormControl(null, [Validators.required, Validators.minLength(3),
+      Validators.maxLength(70)]),
+      texto: new FormControl(null, [Validators.required, Validators.minLength(1000)]),
+      autor: new FormControl(null, [Validators.required, Validators.minLength(3),
+      Validators.maxLength(30)]),
+      imagen: new FormControl(null, [Validators.required]),
+      fecha: new FormControl(null, [Validators.required]),
+      categoria: new FormControl(null, [Validators.required, Validators.minLength(3),
+      Validators.maxLength(30)]),
     })
 
     this.editorConfig = {
@@ -49,39 +50,34 @@ export class FormularioComponent {
     };
   }
 
-
   onSubmit() {
-    const response = this.postsService.create(this.nuevoPost.value)
-    console.log(response);
-    Swal.fire({
-      icon: "success",
-      title: "Post creado",
-      confirmButtonText: "Aceptar",
-      confirmButtonColor: "#008000",
-      color: "white",
-      background: "black",
-    });
-    this.router.navigate(['/posts'])
-  }
-
-
-
-
-
-  /*   async onSubmit() {
-    try {
-      const response = await this.empleadosService.create(this.nuevoEmpleado.value)
-      console.log(response);
-      await Swal.fire({
-        icon: "success",
-        title: "Empleado creado",
-        confirmButtonText: "Aceptar",
+    if (this.nuevoPost.valid) {
+      this.postsService.create(this.nuevoPost.value);
+      Swal.fire({
+        icon: 'success',
+        title: 'Post creado correctamente',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#008000',
+        color: 'white',
+        background: 'black',
       });
-      this.router.navigate(['/empleados'])
-    } catch (e: any) {
-      this.errors = e.errors;
+      this.router.navigate(['/posts']);
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Datos erróneos',
+        text: 'Por favor, completa todos los campos del post de forma correcta.',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#FF0000',
+        color: 'white',
+        background: 'black',
+      });
     }
   }
-   */
+
+  checkError(controlName: string, errorName: string) {
+    return this.nuevoPost.get(controlName)?.hasError(errorName) && this.nuevoPost.get(controlName)?.touched;
+  }
 
 }
+

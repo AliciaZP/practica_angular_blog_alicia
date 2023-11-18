@@ -11,7 +11,7 @@ h2 {
 input {
     display: inline;
     width: 100%;
-    margin-bottom: 2.1rem;
+    margin-bottom: 0.5rem;
 }
 
 label {
@@ -85,6 +85,21 @@ textarea::placeholder {
     font-style: italic;
 }
 
+.error {
+    color: gray;
+    text-transform: none;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+input.ng-valid.ng-touched {
+    border: 2px solid green;
+}
+
 .button {
     width: 10rem;
     height: 3rem;
@@ -101,6 +116,9 @@ textarea::placeholder {
         color: white;
     }
 }
+
+
+
 
 
 /* mediaqueries 768px*/
