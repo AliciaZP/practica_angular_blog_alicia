@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PostsService } from 'src/app/services/posts.service';
 import Swal from 'sweetalert2';
@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class EditPostComponent {
 
-  formularioEdit: FormGroup
+  postEdit: FormGroup
   postTITLE: string = '';
 
   router = inject(Router)
@@ -19,13 +19,16 @@ export class EditPostComponent {
   postsService = inject(PostsService)
 
   constructor() {
-    this.formularioEdit = new FormGroup({
-      titulo: new FormControl(),
-      texto: new FormControl(),
-      autor: new FormControl(),
-      imagen: new FormControl(),
-      fecha: new FormControl(),
-      categoria: new FormControl(),
+    this.postEdit = new FormGroup({
+      titulo: new FormControl(null, [Validators.required, Validators.minLength(3),
+      Validators.maxLength(70)]),
+      texto: new FormControl(null, [Validators.required, Validators.minLength(1000)]),
+      autor: new FormControl(null, [Validators.required, Validators.minLength(3),
+      Validators.maxLength(30)]),
+      imagen: new FormControl(null, [Validators.required]),
+      fecha: new FormControl(null, [Validators.required]),
+      categoria: new FormControl(null, [Validators.required, Validators.minLength(3),
+      Validators.maxLength(30)]),
     })
   }
 
@@ -35,20 +38,38 @@ export class EditPostComponent {
       const response = this.postsService.getByTitulo(this.postTITLE)
       //hay que pasarle un objeto con los mismo campos que definimos en el form group
       const { titulo, texto, autor, imagen, fecha, categoria } = response
-      this.formularioEdit.setValue({ titulo, texto, autor, imagen, fecha, categoria })
+      this.postEdit.setValue({ titulo, texto, autor, imagen, fecha, categoria })
     })
   }
 
   onSubmit() {
-    this.postsService.updateByTitulo(this.postTITLE, this.formularioEdit.value)
-    Swal.fire({
-      icon: "success",
-      title: "Post editado",
-      confirmButtonText: "Aceptar",
-      confirmButtonColor: "#008000",
-      color: "white",
-      background: "black",
-    });
-    this.router.navigate(['/posts'])
+    if (this.postEdit.valid) {
+      this.postsService.updateByTitulo(this.postTITLE, this.postEdit.value);
+      Swal.fire({
+        icon: 'success',
+        title: 'Post editado correctamente',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#008000',
+        color: 'white',
+        background: 'black',
+      });
+      this.router.navigate(['/posts']);
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Datos editados erróneos',
+        text: 'Por favor, completa todos los campos del post de forma correcta.',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#FF0000',
+        color: 'white',
+        background: 'black',
+      });
+    }
   }
+
+  checkError(controlName: string, errorName: string) {
+    return this.postEdit.get(controlName)?.hasError(errorName) && this.postEdit.get(controlName)?.touched;
+  }
+
+
 }

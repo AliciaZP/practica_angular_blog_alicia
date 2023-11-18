@@ -1,33 +1,50 @@
 <section id="formulario" class="text-white p-5 mx-5">
     <h2 class="pb-5">EDITAR POST</h2>
-    <form class="text-uppercase row justify-content-between align-items-start" [formGroup]='formularioEdit'
+    <form class="text-uppercase row justify-content-between align-items-start" [formGroup]='postEdit'
         (ngSubmit)="onSubmit()">
 
-        <label class="bloque2 pb-2">Autor:</label>
-        <input class="bloque2i ms-2 p-1" type="text" formControlName='autor'
+        <label class="bloque2 pb-2 pt-4">Autor:</label>
+        <input class="bloque2i ms-2 px-1 pt-1" type="text" formControlName='autor'
             placeholder="Inserta aquí el autor del post">
+        <p class="error" *ngIf="checkError('autor','required')">El
+            autor es obligatorio.</p>
+        <p class="error" *ngIf="checkError('autor','minlength')">La longitud mínima son 3 caracteres.</p>
+        <p class="error" *ngIf="checkError('autor','maxlength')">La longitud máxima son 30 caracteres.</p>
 
-        <label class="bloque3 pb-2">Categoría:</label>
-        <input class="bloque3i ms-2 p-1" type="text" formControlName='categoria'
+        <label class="bloque3 pb-2 pt-4">Categoría:</label>
+        <input class="bloque3i ms-2 pt-1" type="text" formControlName='categoria'
             placeholder="Inserta aquí la categoría del post">
+        <p class="error" *ngIf="checkError('categoria','required')">La categoría es obligatoria.</p>
+        <p class="error" *ngIf="checkError('categoria','minlength')">La longitud mínima son 3 caracteres.</p>
+        <p class="error" *ngIf="checkError('categoria','maxlength')">La longitud máxima son 30 caracteres.</p>
 
-        <label class="bloque4 pb-2">Fecha:</label>
-        <input class="bloque4i ms-2 p-1" type="text" formControlName='fecha'
+        <label class="bloque4 pb-2 pt-4">Fecha:</label>
+        <input class="bloque4i ms-2 pt-1" type="text" formControlName='fecha'
             placeholder="Inserta aquí la fecha del post">
+        <p class="error" *ngIf="checkError('fecha','required')">La
+            fecha es obligatoria.</p>
 
-        <label class="bloque5 pb-2">Imagen:</label>
-        <input class="bloque5i ms-2 p-1" type="text" formControlName='imagen'
+        <label class="bloque5 pb-2 pt-4">Imagen (URL):</label>
+        <input class="bloque5i ms-2 pt-1" type="text" formControlName='imagen'
             placeholder="Inserta aquí la url de la imagen del post">
+        <p class="error" *ngIf="checkError('imagen','required')">La imagen es obligatoria.</p>
 
-        <label class="bloque1 pb-2">Título:</label>
-        <input class="bloque1i ms-2  p-1" type="text" formControlName='titulo'
+        <label class="bloque1 pb-2 pt-4">Título:</label>
+        <input class="bloque1i ms-2 pt-1" type="text" formControlName='titulo'
             placeholder="Inserta aquí el titulo del post">
+        <p class="error" *ngIf="checkError('titulo','required')">El
+            título es obligatorio</p>
+        <p class="error" *ngIf="checkError('titulo','minlength')">La longitud mínima son 3 caracteres.</p>
+        <p class="error" *ngIf="checkError('titulo','maxlength')">La longitud máxima son 70 caracteres.</p>
 
 
-        <label class="bloque1 pb-2">Texto:</label>
-        <div class="bg-white ms-2 ">
+        <label class="bloque1 pb-2 pt-4">Texto:</label>
+        <div class="bg-white ms-2  pt-1 ">
             <p-editor formControlName="texto" [style]="{ color:'black', height: '150px' }"
                 placeholder="Inserta aquí el texto del post"></p-editor>
+            <p class="error" *ngIf="checkError('texto','required')">El
+                texto es obligatorio.</p>
+            <p class="error" *ngIf="checkError('texto','minlength')">La longitud mínima son 1000 caracteres.</p>
         </div>
 
         <div class="pt-5">
