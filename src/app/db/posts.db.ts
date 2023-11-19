@@ -5,8 +5,8 @@ export const POSTS: Post[] = [
         id: 'post1',
         titulo: "Rojo y Pasión",
         texto: "El color rojo, poderoso y apasionado, ha cautivado a la humanidad a lo largo de la historia. Desde los cálidos tonos de un atardecer hasta la profundidad de una rosa, el rojo evoca emociones intensas y despierta la vitalidad de nuestros sentidos.<br></br>Culturalmente, el rojo ha sido símbolo de amor y deseo, pero también de peligro y valentía. En diversas culturas, se asocia con la buena suerte y la prosperidad, presente en festivales y rituales.<br></br>Desde el punto de vista psicológico, el rojo estimula la energía y la acción. Se dice que aumenta la presión arterial y el ritmo cardíaco, despertando una sensación de urgencia y pasión. En el diseño, el rojo se emplea estratégicamente para captar la atención, comunicar vitalidad y transmitir un mensaje de vital importancia.<br></br>En la naturaleza, el rojo se manifiesta en flores exquisitas y en frutas maduras, sirviendo como señal de fertilidad y vida. En el reino animal, algunos utilizan este color para atraer parejas o advertir de su potencial peligro. El rojo es la esencia de la fuerza y la vitalidad que impulsa la vida en la Tierra.<br></br>En la moda, el rojo es un clásico atemporal, un color que comunica confianza y audacia. Desde el vestido rojo que roba miradas hasta los labios pintados con pasión, este tono nunca pasa desapercibido. En publicidad, el rojo se utiliza para provocar emociones y crear conexiones memorables con productos y marcas.<br></br>En conclusión, el rojo es más que un color en el espectro visual; es una expresión intensa de emociones, símbolo de amor, vitalidad y valentía.",
-        autor: "Alicia",
-        imagen: "https://i.postimg.cc/SQPxnRPj/post-rojo-min.png",
+        autor: "Admin1",
+        imagen: "https://i.postimg.cc/WpK7VHWn/red.jpg",
         fecha: new Date(2023, 1, 30),
         categoria: "Teoría del Color"
     },
@@ -14,8 +14,8 @@ export const POSTS: Post[] = [
         id: 'post2',
         titulo: "Azul y Serenidad",
         texto: "El azul, sereno y cautivador, ha sido un testigo silencioso de la historia y la naturaleza. Desde el vasto cielo hasta la profundidad del océano, este color evoca sensaciones de calma y amplitud.<br></br>En la psicología del color, el azul se asocia con la tranquilidad y la estabilidad emocional. Contemplar un cielo azul despejado o sumergirse en aguas azules puede tener un efecto relajante, liberando la mente de las tensiones diarias.<br></br> Culturalmente, el azul ha sido símbolo de lealtad y verdad. Desde la realeza hasta la iconografía religiosa, este color ha transmitido la idea de confiabilidad y nobleza. En el arte, pintores han capturado la esencia del azul para transmitir sensaciones de paz y reflexión.<br></br>En el diseño, el azul se utiliza estratégicamente para comunicar confianza y profesionalismo. Logotipos de empresas, particularmente en sectores financieros y tecnológicos, a menudo eligen este color para proyectar una imagen de fiabilidad y seguridad.<br></br>La naturaleza también se viste de azul, desde el reflejo del cielo en lagos tranquilos hasta la majestuosidad de glaciares azulados. Este color en la flora y fauna, como las plumas de aves exóticas o las delicadas flores, añade una dimensión de frescura y serenidad. <br></br>En la moda, el azul es un clásico versátil. Desde el índigo de los vaqueros hasta los tonos más suaves en prendas elegantes, este color adapta su expresión a diversos estilos y ocasiones. Es una elección atemporal que trasciende las tendencias efímeras.<br></br> Desde el cielo que observamos hasta los mares que exploramos, este color nos invita a sumergirnos en su calma y contemplar la vastedad de nuestras experiencias. <br></br>",
-        autor: "Alicia",
-        imagen: "https://i.postimg.cc/tTC4xxyn/post-azul-min.png",
+        autor: "Random3",
+        imagen: "https://i.postimg.cc/cL77Q4s9/blue.jpg",
         fecha: new Date(2022, 1, 30),
         categoria: "Teoría del Color"
     },
@@ -23,8 +23,8 @@ export const POSTS: Post[] = [
         id: 'post3',
         titulo: "Verde y Naturaleza",
         texto: "El verde, impregnado de frescura y vitalidad, se erige como un recordatorio constante de la exuberancia de la naturaleza. Desde los exuberantes bosques hasta los campos de hierba ondulante, este color evoca un sentimiento de renovación y conexión con el entorno.< br> </br>Desde una perspectiva psicológica, el verde se percibe como calmante y equilibrado.Su presencia puede aliviar el estrés y promover un sentido de armonía.Asociado con la vida y la vitalidad, el verde se manifiesta como un bálsamo para el espíritu, invitándonos a sumergirnos en la serenidad de la naturaleza.<br> </br>En el diseño, el verde a menudo se utiliza para comunicar mensajes relacionados con la sostenibilidad y la ecología.Empresas comprometidas con la responsabilidad ambiental adoptan tonos verdes en sus identidades visuales, transmitiendo un compromiso con la preservación del medio ambiente. <br> </br>Culturalmente, el verde ha sido símbolo de buena suerte en muchas sociedades.Asociado con la fertilidad y la prosperidad, este color se entrelaza en celebraciones y rituales que celebran la abundancia de la tierra.En la iconografía religiosa, el verde también puede representar la esperanza y la renovación espiritual.<br> </br>En la moda, el verde se presenta como una expresión de frescura y elegancia.Desde tonos más oscuros que evocan la profundidad de los bosques hasta verdes más brillantes que reflejan la vitalidad de la primavera, este color encuentra su lugar en diversas paletas de moda. <br> </br>Desde el verde exuberante de la clorofila hasta el verde apacible de las aguas cristalinas, la naturaleza nos brinda una paleta diversa de este color.En resumen, el verde no solo es una manifestación visual, sino un llamado a apreciar la belleza y la renovación constantes que ofrece nuestro entorno natural.",
-        autor: "Paquito",
-        imagen: "https://i.postimg.cc/65G5nwsc/post-verde-min.png",
+        autor: "User2",
+        imagen: "https://i.postimg.cc/kXbvgvLd/green.jpg",
         fecha: new Date(2021, 1, 30),
         categoria: "Naturaleza"
     },
@@ -32,35 +32,35 @@ export const POSTS: Post[] = [
         id: 'post4',
         titulo: "Amarillo y Energía",
         texto: "El amarillo, radiante y lleno de luz, emerge como un faro de positividad y vitalidad en el espectro de colores. Desde los cálidos rayos del sol hasta los campos de girasoles que se inclinan hacia la luz, este color evoca una sensación de optimismo y alegría.<br> </br>Desde el punto de vista psicológico, el amarillo se asocia con la felicidad y la creatividad. Su luminosidad tiene el poder de estimular la mente y despertar un sentido de optimismo. Se ha demostrado que este color influye positivamente en el estado de ánimo, recordándonos la luminosidad que puede encontrarse incluso en los días más grises. <br> </br>En el diseño, el amarillo se utiliza estratégicamente para resaltar elementos importantes y captar la atención. Logotipos y señalizaciones a menudo incorporan este color para transmitir un mensaje de vitalidad y positividad. En la moda, el amarillo es una elección audaz y vibrante, agregando un toque de frescura a cualquier atuendo. <br> </br> Culturalmente, el amarillo ha sido utilizado para representar una variedad de significados. Desde la representación del lujo hasta la simbolización de la renovación, este color ha dejado su huella en celebraciones y rituales. En la naturaleza, el amarillo resplandece en las flores que anuncian la llegada de la primavera y la abundancia. <br> </br> En la psicología del color, el amarillo también se ha vinculado con la estimulación del sistema nervioso y el apetito. Este tono brillante invita a la actividad y despierta los sentidos, haciéndonos apreciar la vitalidad que lleva consigo.  <br> </br> En resumen, el amarillo no solo ilumina nuestro entorno, sino que también infunde un sentido de optimismo y alegría en nuestras vidas. Desde la naturaleza hasta el diseño, este color resplandece como un recordatorio constante de la luminosidad que podemos encontrar en el mundo que nos rodea..",
-        autor: "Paquito",
-        imagen: "https://i.postimg.cc/ZWY4pGkz/post-amarillo-min.png",
+        autor: "Admin1",
+        imagen: "https://i.postimg.cc/J0BZtR6Q/yellow.jpg",
         fecha: new Date(2020, 1, 30),
-        categoria: "Naturaleza"
+        categoria: "Teoría del Color"
     },
     {
         id: 'post5',
         titulo: "Naranja y Creatividad",
         texto: "El naranja, una fusión vibrante entre la energía del rojo y la luminosidad del amarillo, se presenta como un estallido de vitalidad y creatividad en el espectro de colores. Desde el resplandor cálido de un atardecer hasta la pulpa jugosa de una naranja madura, este tono evoca una sensación de entusiasmo y frescura.<br> </br>Desde una perspectiva psicológica, el naranja se asocia con la estimulación y la creatividad. Su presencia activa y enérgica tiene el poder de inspirar nuevas ideas y perspectivas frescas. En el diseño, el naranja se utiliza estratégicamente para resaltar elementos y agregar un toque juguetón a la composición visual.<br> </br>Culturalmente, el naranja ha sido vinculado con la renovación y la positividad. Se encuentra en festivales y celebraciones que celebran la alegría y la vitalidad. En la naturaleza, el naranja se manifiesta en tonos cálidos de frutas maduras y en el resplandor del otoño, añadiendo una dosis de calidez a nuestro entorno. <br> </br> En la moda, el naranja es un color audaz que añade un toque de energía positiva a cualquier conjunto. Desde tonos más suaves hasta naranjas más intensos, este color encuentra su lugar en diversas paletas de moda, transmitiendo una sensación de confianza y diversión.<br> </br>Desde una perspectiva visual, el naranja destaca y capta la atención, ya sea en señalizaciones de advertencia o en detalles decorativos que buscan resaltar. En resumen, el naranja no solo es un color vibrante, sino un recordatorio constante de la creatividad y vitalidad que puede infundir en nuestras vidas y entorno. ",
-        autor: "Paquito",
-        imagen: "https://i.postimg.cc/fy1zpqdY/post-naranja-min.png",
+        autor: "Admin1",
+        imagen: "https://i.postimg.cc/1z9GMhX9/orange.jpg",
         fecha: new Date(2019, 1, 30),
-        categoria: "Teoría del Color"
+        categoria: "Naturaleza"
     },
     {
         id: 'post6',
         titulo: "Violeta y Misterio",
         texto: "El violeta, con su encanto misterioso, emerge como una fusión intrigante de la calidez del rojo y la serenidad del azul. Desde las elegantes flores hasta la profundidad del crepúsculo, este color evoca una sensación de creatividad, espiritualidad y sofisticación.<br> </br>Desde el punto de vista psicológico, el violeta se asocia con la imaginación y la intuición. Se cree que este tono estimula la mente, invitándonos a explorar ideas innovadoras y perspectivas más profundas. En el diseño, el violeta se utiliza para agregar un toque de elegancia y sofisticación, a menudo vinculado con productos de alta calidad.<br> </br>Culturalmente, el violeta ha sido vinculado a la realeza y la nobleza. A lo largo de la historia, este color ha sido utilizado en vestimenta y símbolos de estatus, transmitiendo una sensación de prestigio y distinción. En la naturaleza, el violeta se presenta en flores exquisitas, añadiendo un toque de belleza y encanto.<br> </br>En la moda, el violeta es un color que refleja una elegancia atemporal. Desde tonos más oscuros que evocan la profundidad de la noche hasta púrpuras más suaves que sugieren delicadeza, este color encuentra su lugar en diversos estilos y ocasiones, aportando un toque de misterio y refinamiento. <br> </br>Visualmente, el violeta resalta y añade un toque de intriga, ya sea en la paleta de colores de una obra de arte o en elementos decorativos que buscan captar la atención. En resumen, el violeta no solo es un color estéticamente atractivo, sino que también despierta la curiosidad, añadiendo un toque de magia y misterio a nuestras experiencias visuales y emocionales.",
-        autor: "Alicia",
-        imagen: "https://i.postimg.cc/vmGQJV42/post-violeta-min.png",
+        autor: "Admin1",
+        imagen: "https://i.postimg.cc/d138P2Gp/violet.jpg",
         fecha: new Date(2018, 1, 30),
-        categoria: "Teoría del Color"
+        categoria: "Sentimientos"
     },
     {
         id: 'post7',
         titulo: "Rosa y Dulzura",
         texto: "El rosa, con su suavidad y feminidad, se presenta como un lienzo de dulzura y ternura en el vasto espectro de colores. Desde los tonos más suaves que acarician el cielo al atardecer hasta los matices más intensos que adornan las flores, este color evoca una sensación de calma y afecto.<br> </br>Desde la perspectiva psicológica, el rosa se asocia con la calma y la relajación. Su presencia transmite una sensación de cuidado y afecto, ofreciendo un refugio de dulzura en medio del ajetreo diario. En el diseño, el rosa se utiliza para crear ambientes delicados y agradables, siendo popular en productos dirigidos a un público femenino.<br> </br>Culturalmente, el rosa ha sido vinculado a la inocencia y la juventud. Se encuentra en juguetes y artículos infantiles, transmitiendo una sensación de pureza y encanto. En la naturaleza, el rosa se presenta en puestas de sol y flores encantadoras, añadiendo un toque de belleza sutil.<br> </br>En la moda, el rosa es un color que suaviza y embellece. Desde tonos más pálidos que sugieren elegancia hasta rosas más brillantes que expresan vitalidad, este color encuentra su lugar en diversas paletas de moda, aportando un toque de femineidad a cualquier conjunto.<br> </br>Visualmente, el rosa se presenta como un susurro de color que acaricia la mirada. Ya sea en detalles decorativos o en elementos gráficos, este tono suave es capaz de suavizar nuestras experiencias visuales. En resumen, el rosa no solo es un color estéticamente encantador, sino que también evoca sentimientos de cariño y tranquilidad, añadiendo una dosis de dulzura a nuestras vidas diarias.",
-        autor: "Anónimo",
-        imagen: "https://i.postimg.cc/zGZDkM8r/post-rosa-min.png",
+        autor: "Random3",
+        imagen: "https://i.postimg.cc/rsvG9D0b/pink.jpg",
         fecha: new Date(2017, 1, 30),
         categoria: "Sentimientos"
     },
@@ -68,26 +68,34 @@ export const POSTS: Post[] = [
         id: 'post8',
         titulo: "Marrón y Naturalidad",
         texto: "El marrón, un tono terroso que evoca la calidez de la tierra y la estabilidad, se erige como un símbolo atemporal en el vasto espectro de colores. Culturalmente, el marrón ha sido asociado con la conexión a la naturaleza y la transmisión de una sensación de calidez y seguridad.<br> </br>Desde una perspectiva psicológica, el marrón se percibe como sólido y confiable. Su presencia transmite una sensación de autenticidad, sugiriendo una conexión arraigada con la naturaleza y la simplicidad. En el diseño, el marrón se utiliza para agregar un toque de autenticidad y atemporalidad, siendo un color apreciado a lo largo de la historia.<br> </br>En la moda, el marrón se asocia con la elegancia clásica. Desde tonos más oscuros que sugieren sofisticación hasta marrones más claros que transmiten un aire más relajado, este color encuentra su lugar en diversas paletas, añadiendo un toque de naturalidad a cualquier conjunto.<br> </br>Culturalmente, el marrón se conecta con la tierra y la naturaleza. Este color se presenta en tierras fértiles y árboles robustos, añadiendo una sensación de arraigo y solidez. Psicológicamente, el marrón se percibe como un color que equilibra y aporta una sensación de estabilidad a nuestras percepciones.<br> </br>Visualmente, el marrón se presenta como un recordatorio constante de la conexión con la tierra. Ya sea en muebles de madera, prendas de vestir o detalles decorativos, este color añade una dosis de naturalidad y estabilidad a nuestro entorno visual. En resumen, el marrón no solo es un color clásico y atemporal, sino que también evoca una sensación de naturalidad y estabilidad en nuestras experiencias diarias.",
-        autor: "Paquito",
-        imagen: "https://i.postimg.cc/XJH7cY7H/post-marron-min.png",
+        autor: "Admin1",
+        imagen: "https://i.postimg.cc/hvjg0jW9/brown.jpg",
         fecha: new Date(2016, 1, 30),
-        categoria: "Teoría del Color"
+        categoria: "Naturaleza"
     },
     {
         id: 'post9',
         titulo: "Gris y Sofisticación",
         texto: "El gris, un color neutro y versátil, emerge como una paleta de matices que representa la neutralidad y la sofisticación en el amplio espectro de colores. Desde tonos más claros que sugieren serenidad hasta grises más oscuros que añaden un toque de misterio, este color se adapta a diversas situaciones y estilos.<br> </br> En el diseño, el gris se convierte en una herramienta poderosa para transmitir profesionalismo y elegancia. Comúnmente utilizado en contextos empresariales y minimalistas, este tono neutral aporta un toque de seriedad a la paleta de colores. Psicológicamente, el gris se asocia con la estabilidad y la madurez.<br> </br>En la moda, el gris es un color atemporal que se adapta a diversas ocasiones y estilos. Ya sea en trajes formales o conjuntos más casuales, este tono sutil agrega un toque de refinamiento a cualquier vestimenta. Este color también se utiliza estratégicamente para resaltar otros colores en composiciones visuales. En fotografía y diseño gráfico, el gris se utiliza para gradaciones y sombreados, aportando refinamiento visual y profundidad a las imágenes.<br> </br>Visualmente, el gris equilibra la expresión visual, añadiendo un toque de refinamiento y sofisticación a nuestras percepciones. En la naturaleza, se manifiesta en días nublados y paisajes urbanos, creando una sensación de armonía. En resumen, el gris es un color versátil que, lejos de ser monótono, enriquece nuestras experiencias visuales con su elegancia discreta y su capacidad para complementar otros tonos en la paleta de colores.En resumen, el gris es un color versátil que va más allá de su aparente simplicidad, desplegando una rica variedad de significados y aplicaciones en distintos contextos estéticos y culturales.",
-        autor: "Anónimo",
-        imagen: "https://i.postimg.cc/C5RMvpRF/post-gris-min.png",
+        autor: "Random3",
+        imagen: "https://i.postimg.cc/DZN12SgZ/grey.jpg",
         fecha: new Date(2015, 1, 30),
-        categoria: "Sentimientos"
+        categoria: "Naturaleza"
     },
     {
         id: 'post10',
         titulo: "Negro y Elegancia",
         texto: "El negro, un color elegante y clásico, se erige como un pilar fundamental en el mundo del diseño y la moda. Culturalmente, el negro está vinculado con la formalidad y el misterio, transmitiendo una sensación de autoridad y poder.<br> </br>En la moda, el negro es un color versátil que se utiliza para crear looks sofisticados y atemporales. Desde vestimenta formal hasta conjuntos más informales, el negro es una elección que nunca pasa de moda. En diseño gráfico, este tono se emplea para resaltar elementos y añadir un toque de elegancia a las composiciones visuales.<br> </br>Psicológicamente, el negro se percibe como fuerte y protector. Su presencia aporta una sensación de seguridad y estabilidad emocional. Culturalmente, el negro ha sido asociado con la elegancia, utilizado en eventos formales y representando un estándar de refinamiento.<br> </br>Visualmente, el negro eleva la estética y agrega un toque de misterio a nuestras experiencias visuales. Este color se presenta en paisajes nocturnos y en elementos de diseño que buscan destacar con sofisticación. En resumen, el negro no solo es un color estéticamente poderoso, sino que también transmite una sensación de elegancia y misterio que enriquece nuestras percepciones visuales.En climas fríos, el negro se utiliza para absorber la luz solar y generar calor. <br> </br> Por otro lado, en climas cálidos puede absorber el calor, lo que lleva a la percepción de que absorbe la luz y el calor. <br> </br>El negro es un color que va más allá de la simple ausencia de color, siendo un elemento poderoso en diversos ámbitos de la vida cotidiana y la expresión visual.",
-        autor: "Alicia",
-        imagen: "https://i.postimg.cc/JhQh0qwW/post-negro-min.png",
+        autor: "User2",
+        imagen: "https://i.postimg.cc/ZqZcgv7z/black.jpg",
+        fecha: new Date(2014, 1, 30),
+        categoria: "Sentimientos"
+    }, {
+        id: 'post10',
+        titulo: "Blanco y Pureza",
+        texto: "El color blanco, símbolo de pureza y luminosidad, ha sido apreciado a lo largo de la historia por su simplicidad y elegancia. Es la amalgama de todos los colores del espectro, reflejando la luz en su máxima expresión. En la naturaleza, el blanco se manifiesta en la frescura de la nieve recién caída, en la pureza de las flores de lirio y en la suavidad de las nubes en un cielo despejado.<br> </br>Desde el punto de vista psicológico, el blanco evoca sensaciones de limpieza, claridad y orden. En la moda, es un lienzo atemporal que transmite serenidad y sofisticación. En diseño interior, el blanco amplifica visualmente el espacio, proporcionando una sensación de amplitud y luminosidad.<br> </br>En arquitectura, el blanco se ha utilizado para realzar la belleza de estructuras icónicas, como el Taj Mahal en la India o la Alhambra en España. La elección del blanco no solo resalta la magnificencia de estos edificios, sino que también refleja la luz del entorno, creando una atmósfera mágica.<br> </br>En términos de simbolismo cultural, el blanco a menudo se asocia con la paz y la inocencia. En ceremonias matrimoniales, es común que la novia vista de blanco, simbolizando pureza y un nuevo comienzo. En la bandera de muchas naciones, el blanco representa la paz y la unidad. <br> </br>A pesar de su asociación con la pureza, el blanco también puede transmitir frialdad si se utiliza en exceso. En el ámbito científico, el blanco se utiliza como reflector en experimentos ópticos debido a su capacidad para reflejar toda la luz que incide sobre él.<br> </br>En conclusión, el color blanco es un lienzo versátil que ha capturado la imaginación a lo largo de la historia en diversas disciplinas. Desde el arte hasta la moda, la arquitectura y más allá, el blanco continúa siendo una elección poderosa que trasciende modas y culturas, ofreciendo una paleta rica en significado y expresión.",
+        autor: "Admin1",
+        imagen: "https://i.postimg.cc/htRbz7qQ/white.jpg",
         fecha: new Date(2014, 1, 30),
         categoria: "Sentimientos"
     },
