@@ -18,11 +18,12 @@ export class FormularioComponent {
 
   editorConfig: any;
 
+
   constructor() {
     this.nuevoPost = new FormGroup({
       titulo: new FormControl(null, [Validators.required, Validators.minLength(3),
       Validators.maxLength(70)]),
-      texto: new FormControl(null, [Validators.required, Validators.minLength(1000)]),
+      texto: new FormControl([Validators.required, Validators.minLength(1000)]),
       autor: new FormControl(null, [Validators.required, Validators.minLength(3),
       Validators.maxLength(30)]),
       imagen: new FormControl(null, [Validators.required]),
@@ -30,25 +31,8 @@ export class FormularioComponent {
       categoria: new FormControl(null, [Validators.required, Validators.minLength(3),
       Validators.maxLength(30)]),
     })
-
-    this.editorConfig = {
-      toolbar: [
-        ['bold', 'italic', 'underline', 'strike'],
-        ['blockquote', 'code-block'],
-        [{ 'header': 1 }, { 'header': 2 }],
-        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-        [{ 'script': 'sub' }, { 'script': 'super' }],
-        [{ 'indent': '-1' }, { 'indent': '+1' }],
-        [{ 'direction': 'rtl' }],
-        [{ 'size': ['small', false, 'large', 'huge'] }],
-        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-        [{ 'color': [] }, { 'background': [] }],
-        [{ 'font': [] }],
-        [{ 'align': [] }],
-        ['clean']
-      ]
-    };
   }
+
 
   onSubmit() {
     if (this.nuevoPost.valid) {
@@ -75,9 +59,9 @@ export class FormularioComponent {
     }
   }
 
+
   checkError(controlName: string, errorName: string) {
     return this.nuevoPost.get(controlName)?.hasError(errorName) && this.nuevoPost.get(controlName)?.touched;
   }
 
 }
-

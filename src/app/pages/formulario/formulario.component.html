@@ -40,18 +40,21 @@
 
 
         <label class="bloque1 pb-2 pt-4">Texto:</label>
-        <div class="bg-white ms-2 ">
-            <p-editor formControlName="texto" [style]="{ color:'black', height: '150px' }"
-                placeholder="Inserta aquí el texto del post"></p-editor>
+        <div class="ms-2">
+            <editor class="editor" formControlName="texto" [init]="{
+            base_url: '/tinymce', 
+            suffix: '.min',  
+            placeholder: 'Inserta aquí el contenido del post'   
+        }"></editor>
             <p class="error" *ngIf="checkError('texto','required')">El
                 texto es obligatorio.</p>
             <p class="error" *ngIf="checkError('texto','minlength')">La longitud mínima son 1000 caracteres.</p>
         </div>
 
-
         <div class="pt-5">
-            <input class="button" type="submit" value="Añadir post">
+            <input class="button" type="submit" value="Subir post">
         </div>
+
     </form>
 
 </section>

@@ -70,17 +70,8 @@ label {
     box-shadow: 0 0 0px 3px rgba(148, 0, 211, 1);
 }
 
-textarea:focus {
-    outline: none;
-    box-shadow: 0 0 0px 3px rgba(255, 0, 0, 1);
-}
 
 input::placeholder {
-    color: lightslategrey;
-    font-style: italic;
-}
-
-textarea::placeholder {
     color: lightslategrey;
     font-style: italic;
 }
@@ -116,8 +107,6 @@ input.ng-valid.ng-touched {
         color: white;
     }
 }
-
-
 
 
 
