@@ -12,7 +12,6 @@ section .found {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: start;
     gap: 1rem;
 }
 
@@ -91,8 +90,6 @@ img {
 @media(min-width: 48rem) {
     .buscar {
         display: flex;
-        justify-content: start;
-        align-items: start;
         gap: 5rem;
     }
 
