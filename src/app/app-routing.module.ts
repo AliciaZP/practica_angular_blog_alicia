@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'posts/:postID', component: DetallePostComponent },
   { path: 'favoritos', component: ListaFavoritosComponent },
   { path: 'new', component: FormularioComponent },
-  { path: 'registro', component: FormRegistroComponent },
+  { path: 'register', component: FormRegistroComponent },
   { path: 'login', component: FormLoginComponent },
   { path: 'error', component: ErrorComponent },
   { path: '**', redirectTo: '/home' }
