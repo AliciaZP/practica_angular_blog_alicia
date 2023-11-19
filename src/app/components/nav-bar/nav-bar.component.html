@@ -2,11 +2,15 @@
     <nav class="px-5 py-4 bg-black fixed-top ">
         <ul class="justify-content-start align-items-center gap-5 ">
             <li [routerLink]="['home']"><i class="fa-solid fa-house"></i>
-                Home</li>
-            <li [routerLink]="['posts']"><i class="fa-solid fa-list-ul bloque1"></i> Lista de Posts</li>
-            <li [routerLink]="['favoritos']"><i class="fa-regular fa-star bloque2"></i> Posts Favoritos</li>
+            </li>
+            <li [routerLink]="['teoria']"><i class="fa-solid fa-book bloque4"></i>
+                Teoria</li>
+            <li [routerLink]="['autores']"><i class="fa-solid fa-palette bloque5"></i>
+                Autores</li>
+            <li [routerLink]="['posts']"><i class="fa-solid fa-list-ul bloque1"></i> Posts</li>
+            <li [routerLink]="['favoritos']"><i class="fa-regular fa-star bloque2"></i> Favoritos</li>
             <li class="flex-grow-1" [routerLink]="['new']"><i class="fa-regular fa-square-plus bloque3"></i>
-                Añadir nuevo Post</li>
+                Añadir Post</li>
             <li [routerLink]="['register']"><i class="fa-solid fa-user-plus bloque4"></i> Registrarse</li>
             <li [routerLink]="['login']"><i class="fa-solid fa-user-lock bloque5"></i> Login</li>
         </ul>

@@ -1,0 +1,78 @@
+#teoria {
+    margin-top: 12rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: var(--fontSecondary)
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-family: var(--fontSecondary)
+}
+
+h5 {
+    font-size: 1.5rem;
+    font-family: var(--fontSecondary);
+    display: inline;
+}
+
+i {
+    display: inline;
+}
+
+.bloque1 {
+    color: var(--colorRed);
+}
+
+.bloque2 {
+    color: var(--colorGolden);
+}
+
+.bloque3 {
+    color: var(--colorGreen);
+}
+
+.bloque4 {
+    color: var(--colorBlue);
+    ;
+}
+
+.bloque5 {
+    color: var(--colorPurple);
+}
+
+button:focus {
+    box-shadow: 0px 0px 5px white;
+}
+
+/* TEXTO COLOR */
+.text-gradient {
+
+    color: transparent;
+    background-image: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    ;
+    background-clip: text;
+    animation: color 10s linear infinite;
+    background-size: 500%;
+}
+
+@keyframes color {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+
+/* mediaqueries 768px*/
+@media(min-width: 48rem) {
+    #teoria {
+        margin-top: 4rem;
+    }
+}

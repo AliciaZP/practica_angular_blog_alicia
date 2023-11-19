@@ -9,11 +9,14 @@ import { ErrorComponent } from './pages/error/error.component';
 import { ListaFavoritosComponent } from './pages/lista-favoritos/lista-favoritos.component';
 import { FormLoginComponent } from './pages/form-login/form-login.component';
 import { FormRegistroComponent } from './pages/form-registro/form-registro.component';
+import { TeoriaComponent } from './pages/teoria/teoria.component';
 
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: 'home', component: HomeComponent },
+  { path: 'teoria', component: TeoriaComponent },
+  { path: 'autores', component: TeoriaComponent },
   { path: 'posts', component: ListaPostsComponent },
   { path: 'posts/edit/:postID', component: EditPostComponent },
   { path: 'posts/:postID', component: DetallePostComponent },

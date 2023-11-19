@@ -21,6 +21,7 @@ import { ErrorComponent } from './pages/error/error.component';
 import { ListaFavoritosComponent } from './pages/lista-favoritos/lista-favoritos.component';
 import { FormLoginComponent } from './pages/form-login/form-login.component';
 import { FormRegistroComponent } from './pages/form-registro/form-registro.component';
+import { TeoriaComponent } from './pages/teoria/teoria.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FormRegistroComponent } from './pages/form-registro/form-registro.compo
     ErrorComponent,
     ListaFavoritosComponent,
     FormLoginComponent,
-    FormRegistroComponent
+    FormRegistroComponent,
+    TeoriaComponent
   ],
   imports: [
     BrowserModule,
