@@ -22,6 +22,7 @@ import { ListaFavoritosComponent } from './pages/lista-favoritos/lista-favoritos
 import { FormLoginComponent } from './pages/form-login/form-login.component';
 import { FormRegistroComponent } from './pages/form-registro/form-registro.component';
 import { TeoriaComponent } from './pages/teoria/teoria.component';
+import { CreadoresComponent } from './pages/creadores/creadores.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { TeoriaComponent } from './pages/teoria/teoria.component';
     ListaFavoritosComponent,
     FormLoginComponent,
     FormRegistroComponent,
-    TeoriaComponent
+    TeoriaComponent,
+    CreadoresComponent
   ],
   imports: [
     BrowserModule,

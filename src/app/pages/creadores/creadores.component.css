@@ -1,4 +1,4 @@
-#teoria {
+#creadores {
     margin-top: 12rem;
     margin-bottom: 2rem;
 }
@@ -77,7 +77,7 @@ button:focus {
 
 /* mediaqueries 768px*/
 @media(min-width: 48rem) {
-    #teoria {
+    #creadores {
         margin-top: 4rem;
     }
 }

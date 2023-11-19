@@ -10,13 +10,14 @@ import { ListaFavoritosComponent } from './pages/lista-favoritos/lista-favoritos
 import { FormLoginComponent } from './pages/form-login/form-login.component';
 import { FormRegistroComponent } from './pages/form-registro/form-registro.component';
 import { TeoriaComponent } from './pages/teoria/teoria.component';
+import { CreadoresComponent } from './pages/creadores/creadores.component';
 
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: 'home', component: HomeComponent },
   { path: 'teoria', component: TeoriaComponent },
-  { path: 'autores', component: TeoriaComponent },
+  { path: 'creadores', component: CreadoresComponent },
   { path: 'posts', component: ListaPostsComponent },
   { path: 'posts/edit/:postID', component: EditPostComponent },
   { path: 'posts/:postID', component: DetallePostComponent },

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-teoria',
+  selector: 'teoria',
   templateUrl: './teoria.component.html',
   styleUrls: ['./teoria.component.css']
 })
