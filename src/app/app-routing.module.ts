@@ -11,6 +11,7 @@ import { FormLoginComponent } from './pages/form-login/form-login.component';
 import { FormRegistroComponent } from './pages/form-registro/form-registro.component';
 import { TeoriaComponent } from './pages/teoria/teoria.component';
 import { CreadoresComponent } from './pages/creadores/creadores.component';
+import { authGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
@@ -19,10 +20,10 @@ const routes: Routes = [
   { path: 'teoria', component: TeoriaComponent },
   { path: 'creadores', component: CreadoresComponent },
   { path: 'posts', component: ListaPostsComponent },
-  { path: 'posts/edit/:postID', component: EditPostComponent },
+  { path: 'posts/edit/:postID', component: EditPostComponent, canActivate: [authGuard] },
   { path: 'posts/:postID', component: DetallePostComponent },
-  { path: 'favoritos', component: ListaFavoritosComponent },
-  { path: 'new', component: FormularioComponent },
+  { path: 'favoritos', component: ListaFavoritosComponent, canActivate: [authGuard] },
+  { path: 'new', component: FormularioComponent, canActivate: [authGuard] },
   { path: 'register', component: FormRegistroComponent },
   { path: 'login', component: FormLoginComponent },
   { path: 'error', component: ErrorComponent },

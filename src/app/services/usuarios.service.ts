@@ -27,7 +27,6 @@ export class UsuariosService {
   }
 
 
-
   loginUsuario(datosLogin: Usuario): boolean {
     const usuarioEncontrado = this.arrUsuarios.find(
       usuario => usuario.email === datosLogin.email && usuario.password === datosLogin.password
@@ -43,7 +42,8 @@ export class UsuariosService {
   }
 
   isLogged(): boolean {
-    return this.usuarioIdentificado !== null;
+    return localStorage.getItem('usuarios') ? true : false;
+
   }
 }
 
