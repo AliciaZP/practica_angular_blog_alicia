@@ -24,26 +24,29 @@ export class FavoritosService {
   }
 
   agregarFavorito(pPost: any) {
-    const postFound = this.arrFavoritos.find(post => post.titulo === pPost.titulo)
-    if (postFound) {
-      Swal.fire({
-        icon: "info",
-        title: "Ya es favorito",
-        confirmButtonText: "Aceptar",
-        confirmButtonColor: "#FFA500",
-        color: "white",
-        background: "black",
-      });
-    } else
-      this.arrFavoritos.push(pPost);
-    //guardo en Local Storage el valor de array
-    localStorage.setItem('array_favoritos', JSON.stringify(this.arrFavoritos))
-    return
-  }
+    const postEncontradoIndex = this.arrFavoritos.findIndex(post => post.titulo === pPost.titulo);
 
-  eliminarFavorito(postTitulo: string) {
-    //es para comprobar que los que su id no coincide con el dado pasan el filtro, olos demas no
-    this.arrFavoritos = this.arrFavoritos.filter(fav => fav.titulo !== postTitulo);
+    if (postEncontradoIndex !== -1) {
+      this.arrFavoritos.splice(postEncontradoIndex, 1);
+      Swal.fire({
+        icon: 'info',
+        title: 'Eliminado de favoritos',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#FFA500',
+        color: 'white',
+        background: 'black',
+      });
+    } else {
+      this.arrFavoritos.push(pPost);
+      Swal.fire({
+        icon: 'success',
+        title: 'Agregado a favoritos',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#008000',
+        color: 'white',
+        background: 'black',
+      });
+    }
   }
 
 
