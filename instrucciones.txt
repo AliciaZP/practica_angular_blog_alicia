@@ -77,15 +77,28 @@ Tambien existe la posibilidad de editar los post sin tener que borrarlos y crear
     - Crear un nuevo componente en pages/EditPost (OK)
      -Realizar los métodos, rutas e imports correspondientes (OK)
 
+Añadir la posibilidad de crear una sección con los post favoritos-
+    - Crear un botón que permita agregar y eliminar fav en la card-post component (OK)
+    - Crear el servicio correspondiente con sus métodos (OK)
+    - El listado también tiene filtros para ordenadar la informacion (OK)
 
-Ponerle estilo a toda la app (FALTAAA)
+Añadir la posibilidad de registrarse y logearse como nuevo usuario. Para ello necesitamos usar Local Storage para guardar los datos de las sesiones.
+    - Implementar el formulario de registro con sus validaciones (OK)
+    - Implementar el formulario de login con sus validaciones (OK)
+    - Implementar Local Storage para almacenar los datos (OK)
+
+Añadir más pages al blog, en las que demos más contenido y contexto al blog:
+    - Pages teoria (OK)
+    - Pages creadores (OK)
+
+Añadir una page que corresponda a la tipica página de Error por si el usuario se encuentra con algun enlace que no funciona o que está en construcción:
+    - Implementar el componente Error para incluirlo (OK)
+
+Añadir CSS y Bootstrap a todo el proyecto (estilo inspirado en el Pantone a conjunto con el negro que es la suma de todos los pigmentos de los colores)  (OK)
+----------------------------------------------------------------------------------------
+PENDIENTES:
+
+Queda pendiente finalizar el funcionamiento de los AuthGuard. Al no existir un elemento de autentificacion y solo tener los datos del local storage (que si se almacenan) no he conseguido identificar como implementarlo para que al loggearse el usuario active los AuthGuard y le deje acceder a ciertas secciones que no deberían estar visibles para el usuario no logeado.
+
 
 ----------------------------------------------------------------------------------------
-COSAS QUE REVISAR:
-- Por que el filtro de categoria y autores no funcionan a la vez
-- Por que el routing del formulario no puede ser posts/new
-- Falta hacer el localStorage
-- Falta hacer todo el CSS
-
-----------------------------------------------------------------------------------------
-PARA CERRAR REFACTORIZACION
